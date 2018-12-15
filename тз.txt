@@ -1,0 +1,239 @@
++ мінімальний вивід з баланса 50$ з майнінг 15$
++ перевод з балансу на майнінг баланс коміся 0%
++ тімдевелопер 1000$ пакет
+- марчент бонус
+- статуси і винагороди
+- інформація по виплатах в адмінці
+
+видалети пакети
+
+58062485
+64, 8 = 1
+65 = 2
+
+69117691
+6,3 = 1
+5 = 2
+
+98332285
+7 = 1
+4 = 3
+
+777
+680 - 6
+
+66025479
+
+
+cache()->store('tarantool')->getCall('rm_user_deposit', [
+    $this->deposit->user_id,
+    $this->deposit->id,
+    $this->deposit->plan,
+]);
+
+
+
+==========
+array:6 [
+  "#" => 235
+  "user_id" => 10818376
+  "mining_balance_old" => 13.4389999997
+  "mining_balance_new" => -0.016500000300001
+  "amount_usd" => 13.4555
+  "amount" => "14.95"
+]
+array:6 [
+  "#" => 253
+  "user_id" => 30729553
+  "mining_balance_old" => 15.0535
+  "mining_balance_new" => 1.5535
+  "amount_usd" => 13.5
+  "amount" => "15"
+]
+array:6 [
+  "#" => 232
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -2.4705000004
+  "amount_usd" => 11.8869
+  "amount" => "13.21"
+]
+array:6 [
+  "#" => 233
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -1.1611000004
+  "amount_usd" => 10.5775
+  "amount" => "11.75"
+]
+array:6 [
+  "#" => 231
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -3.9501000004
+  "amount_usd" => 13.3665
+  "amount" => "14.85"
+]
+array:6 [
+  "#" => 234
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => 0.015899999600002
+  "amount_usd" => 9.4005
+  "amount" => "10.45"
+]
+array:6 [
+  "#" => 244
+  "user_id" => 86837233
+  "mining_balance_old" => 1708.9100000005
+  "mining_balance_new" => -1.0899999994997
+  "amount_usd" => 1710.0
+  "amount" => "1900"
+]
+array:6 [
+  "#" => 246
+  "user_id" => 98641290
+  "mining_balance_old" => 83.2744
+  "mining_balance_new" => 0.4744
+  "amount_usd" => 82.8
+  "amount" => "92"
+]
+array:6 [
+  "#" => 245
+  "user_id" => 98641290
+  "mining_balance_old" => 83.2744
+  "mining_balance_new" => -10.3256
+  "amount_usd" => 93.6
+  "amount" => "104"
+]
+
+==========
+
+array:6 [
+  "#" => 235
+  "user_id" => 10818376
+  "mining_balance_old" => 13.4389999997
+  "mining_balance_new" => -0.016500000300001
+  "amount_usd" => 13.4555
+  "amount" => "14.95"
+]
+array:6 [
+  "#" => 232
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -2.4705000004
+  "amount_usd" => 11.8869
+  "amount" => "13.21"
+]
+array:6 [
+  "#" => 233
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -1.1611000004
+  "amount_usd" => 10.5775
+  "amount" => "11.75"
+]
+array:6 [
+  "#" => 231
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4163999996
+  "mining_balance_new" => -3.9501000004
+  "amount_usd" => 13.3665
+  "amount" => "14.85"
+]
+array:6 [
+  "#" => 244
+  "user_id" => 86837233
+  "mining_balance_old" => 1708.9100000005
+  "mining_balance_new" => -1.0899999994997
+  "amount_usd" => 1710.0
+  "amount" => "1900"
+]
+array:6 [
+  "#" => 245
+  "user_id" => 98641290
+  "mining_balance_old" => 83.2744
+  "mining_balance_new" => -10.3256
+  "amount_usd" => 93.6
+  "amount" => "104"
+]
+============
+
+array:6 [
+  "#" => 235
+  "user_id" => 10818376
+  "mining_balance_old" => 13.4399999998
+  "mining_balance_new" => -0.015500000200001
+  "amount_usd" => 13.4555
+  "amount" => "14.95"
+]
+array:6 [
+  "#" => 253
+  "user_id" => 30729553
+  "mining_balance_old" => 15.0500000002
+  "mining_balance_new" => 1.5500000002
+  "amount_usd" => 13.5
+  "amount" => "15"
+]
+array:6 [
+  "#" => 232
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4200000004
+  "mining_balance_new" => -2.4668999996
+  "amount_usd" => 11.8869
+  "amount" => "13.21"
+]
+array:6 [
+  "#" => 233
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4200000004
+  "mining_balance_new" => -1.1574999996
+  "amount_usd" => 10.5775
+  "amount" => "11.75"
+]
+array:6 [
+  "#" => 231
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4200000004
+  "mining_balance_new" => -3.9464999996
+  "amount_usd" => 13.3665
+  "amount" => "14.85"
+]
+array:6 [
+  "#" => 234
+  "user_id" => 43095476
+  "mining_balance_old" => 9.4200000004
+  "mining_balance_new" => 0.019500000400003
+  "amount_usd" => 9.4005
+  "amount" => "10.45"
+]
+array:6 [
+  "#" => 244
+  "user_id" => 86837233
+  "mining_balance_old" => 1708.9100000005
+  "mining_balance_new" => -1.0899999994997
+  "amount_usd" => 1710.0
+  "amount" => "1900"
+]
+array:6 [
+  "#" => 246
+  "user_id" => 98641290
+  "mining_balance_old" => 83.27
+  "mining_balance_new" => 0.47
+  "amount_usd" => 82.8
+  "amount" => "92"
+]
+array:6 [
+  "#" => 245
+  "user_id" => 98641290
+  "mining_balance_old" => 83.27
+  "mining_balance_new" => -10.33
+  "amount_usd" => 93.6
+  "amount" => "104"
+]
+================
+237	75057149	14.85 $	0.15 $	vmc_balance => BTC	processing	-	2017-11-20 08:39:42
+241	16913382	505.00 $	5.05 $	vmc_balance => BTC	processing	-	2017-11-20 09:49:18
+243	10641239	297.00 $	2.97 $	balance => BTC	processing	-	2017-11-20 18:58:49
+248	29203932	16.00 $	0.16 $	vmc_balance => BTC	processing	-	2017-11-21 08:37:44
+252	29203932	95.00 $	0.95 $	vmc_balance => BTC	processing	-	2017-11-21 08:47:07
