@@ -1,5 +1,5 @@
 @extends('unify.layouts.auth')
-@section('title', 'Admin Panel')
+@section('title', '-== Admin Panel ==-')
 @section('page')
 
 	<div class="panel-heading clearfix">
