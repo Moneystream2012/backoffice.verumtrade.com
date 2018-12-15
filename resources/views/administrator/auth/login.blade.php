@@ -1,10 +1,10 @@
 @extends('unify.layouts.auth')
-@section('title', '-== Admin Panel ==-')
+@section('title', 'Admin Panel')
 @section('page')
 
 	<div class="panel-heading clearfix">
 		<div class="pull-left">
-			<i class="fa fa-lock"></i> Admin Panel
+			<i class="fa fa-lock"></i> -== Admin Panel ==-
 		</div>
 	</div>
 	<div class="panel-body">
