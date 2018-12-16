@@ -37,7 +37,7 @@ class ReplenishmentPayController extends Controller
     {
         $this->validate($request, [
             'amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
-            'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money',
+            'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
             'type_balance' => 'required|in:balance,mining_balance',
         ]);
 
@@ -97,6 +97,9 @@ class ReplenishmentPayController extends Controller
             case 'yandex-money':
                 return $this->yandexMoney($order);
                 break;
+	        case 'free-kassa':
+		        return $this->freeKassa($order);
+		        break;
             default:
                 flash()->error('Error replenishment.');
         }
@@ -111,12 +114,16 @@ class ReplenishmentPayController extends Controller
      */
     public function callback(Request $request, $method)
     {
+	    $order_id = 0;
+
         if ($method == 'bitcoin') {
             $order_id = $request->input('order_id');
         } elseif ($method == 'perfect_money') {
             $order_id = $request->input('PAYMENT_ID');
         } elseif ($method == 'yandex-money') {
             $order_id = $request->input('label');
+        } elseif ($method == 'freekassa') {
+	        $order_id = $request->input('MERCHANT_ORDER_ID');
         }
 
         $order_id = (int)$order_id;
@@ -127,7 +134,7 @@ class ReplenishmentPayController extends Controller
             return;
         }
 
-        if ($request->input('token') == $replenishment->token || $method == 'yandex-money') {
+        if ($request->input('token') == $replenishment->token || $method == 'yandex-money' || $method == 'freekassa') {
             $status = null;
             $amount = $replenishment->cost_amount + $replenishment->amount;
             if ($method == 'bitcoin') {
@@ -166,6 +173,23 @@ class ReplenishmentPayController extends Controller
                 } else {
                     $status = 'invalid';
                 }
+            }  elseif ($method == 'freekassa') {
+	            $freeKassaServerIP = $_SERVER[ isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
+	            if (!in_array($freeKassaServerIP, config('freekassa.ip_list'))) {
+		            die("Hacking attempt!");
+	            }
+
+	            $merchantId = config('freekassa.merchant_id');
+	            $secret = config('freekassa.secret2');
+	            $freekassaAmount = $request->input('AMOUNT');
+	            $sign = md5($merchantId .':'. $freekassaAmount .':'. $secret .':'. $order_id);
+
+	            if ($sign == $_POST['SIGN'] && round($freekassaAmount, 2) >= round($amount, 2)) {
+		            $status = 'paid';
+		            $replenishment->pay();
+	            } else {
+		            $status = 'invalid';
+	            }
             }
 
             if (!is_null($status)) {
@@ -194,6 +218,20 @@ class ReplenishmentPayController extends Controller
 
         return redirect()->route('personal-office.replenishment.index');
     }
+
+	public function success_freekassa()
+	{
+		flash()->success(trans('unify/personal-office/finance/replenishment.pay_success'))->important();
+
+		return redirect()->route('personal-office.replenishment.index');
+	}
+
+	public function fail_freekassa()
+	{
+		flash()->error(trans('unify/personal-office/finance/replenishment.pay_fail'))->important();
+
+		return redirect()->route('personal-office.replenishment.index');
+	}
 
     public function ecommerce(Request $request)
     {
@@ -341,5 +379,20 @@ class ReplenishmentPayController extends Controller
             ]),
         ]);
     }
+
+	private function freeKassa($order)
+	{
+		$merchantId = config('freekassa.merchant_id');
+		$secret = config('freekassa.secret');
+		$sign = md5($merchantId . ':'. $order->full_amount . ':'. $secret . ':'. $order->replenishment_id);
+
+		return view('freekassa.form', [
+			'merchant_id' => $merchantId,
+			'order_id' => $order->replenishment_id,
+			'amount' => $order->full_amount,
+			'sign' => $sign,
+			'currency' => $order->currency,
+		]);
+	}
 
 }

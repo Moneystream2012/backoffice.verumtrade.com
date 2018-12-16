@@ -90,6 +90,8 @@
                                 <option value="">Select an Option</option>
                                 <option value="bitcoin">Bitcoin (altcoins)</option>
                                 <option value="perfect_money">Perfect Money</option>
+                                <option value="free_kassa">FreeKassa</option>
+                                {{--<option value="yandex-money">Yandex Money (Visa/MasterCard)</option>--}}
                                 {{--<option value="verumcoin">Verumcoin</option>--}}
                                 {{--<option value="advcash">AdvCash</option>--}}
                             </select>
