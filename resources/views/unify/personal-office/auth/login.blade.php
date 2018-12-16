@@ -82,6 +82,15 @@
                 </div>
             </div>
             {{--@captcha(App::getLocale())--}}
+
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <p><a href="//www.free-kassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/7.png"></a></p>
+                </div>
+                <div class="col-xs-6">
+                    <p><a href="https://www.fkwallet.ru"><img src="https://www.fkwallet.ru/assets/2017/images/btns/icon_wallet12.png" title="Обмен криптовалют"></a></p>
+                </div>
+            </div>
         </form>
     </div>
 @endsection
