@@ -83,8 +83,8 @@
             </div>
             {{--@captcha(App::getLocale())--}}
 
-            <div class="form-group">
-                <div class="col-xs-6">
+            <div class="form-group" style="margin-top: 50px !important;">
+                <div class="col-xs-6" style="margin-left: 0 !important;">
                     <p><a href="//www.free-kassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/7.png"></a></p>
                 </div>
                 <div class="col-xs-6">
