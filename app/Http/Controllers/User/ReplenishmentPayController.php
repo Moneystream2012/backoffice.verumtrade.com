@@ -176,7 +176,7 @@ class ReplenishmentPayController extends Controller
             }  elseif ($method == 'freekassa') {
 	            $freeKassaServerIP = $_SERVER[ isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
 	            if (!in_array($freeKassaServerIP, config('freekassa.ip_list'))) {
-		            die("Hacking attempt!");
+		            die("Hacking attempt from IP: {$freeKassaServerIP}");
 	            }
 
 	            $merchantId = config('freekassa.merchant_id');
