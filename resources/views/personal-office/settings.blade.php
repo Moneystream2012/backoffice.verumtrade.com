@@ -155,7 +155,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <p class="panel-title">Settings</p>
+                <p class="panel-title">@lang('lang.en.personal-office.settings.title')</p>
             </div>
             <div class="panel-body">
                 <div class="form-group">

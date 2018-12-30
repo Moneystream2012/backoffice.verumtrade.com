@@ -66,7 +66,7 @@
 
 		<div class="form-group">
 			<a href="{{ route('personal-office.login') }}" class="btn btn-block btn-primary">
-				<i class="fa fa-sign-in"></i> Login
+				<i class="fa fa-sign-in"></i> @lang('lang.en.personal-office.auth.login.title')
 			</a>
 		</div>
 	</div>

@@ -68,7 +68,7 @@
                             <hr>
                             <div class="margin-top">
                                 <center>
-                                    <h3><i class="fa fa-send" style="color: #0088cc;"></i> ICO Telegram</h3>
+                                    <h3><i class="fa fa-send" style="color: #0088cc;"></i>@lang('lang.en.personal-office.ico.telegram.title')</h3>
                                     {!! $chart->html() !!}
                                 </center>
                             </div>

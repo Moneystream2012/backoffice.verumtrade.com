@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-block btn-primary">
-                            <i class="fa fa-sign-in"></i> Login
+                            <i class="fa fa-sign-in"></i> @lang('lang.en.personal-office.auth.login.title')
                         </button>
                     </div>
                     <div class="col-xs-6">

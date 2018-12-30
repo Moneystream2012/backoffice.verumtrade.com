@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-sm-12">
                         <button class="btn btn-primary"
-                                {{Carbon\Carbon::now()->isMonday() ?: '_disabled'}} type="submit">Withdraw
+                                {{Carbon\Carbon::now()->isMonday() ?: '_disabled'}} type="submit">@lang('lang.en.personal-office.balance.withdraw.title')
                         </button>
                     </div>
 
@@ -91,7 +91,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Withdraw</th>
+                            <th>@lang('lang.en.personal-office.balance.withdraw.title')</th>
                             <th>Amount</th>
                             <th>Commission</th>
                             <th>Wallet Address</th>

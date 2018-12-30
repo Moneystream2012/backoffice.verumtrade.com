@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary" type="submit">Replenishment</button>
+                        <button class="btn btn-primary" type="submit">@lang('lang.en.personal-office.replenishment.title')</button>
                     </div>
 
                     {{Form::close()}}
@@ -124,7 +124,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Replenishment</th>
+                            <th>@lang('lang.en.personal-office.replenishment.title')</th>
                             <th>Amount</th>
                             <th>Commission</th>
                             <th>Currency</th>

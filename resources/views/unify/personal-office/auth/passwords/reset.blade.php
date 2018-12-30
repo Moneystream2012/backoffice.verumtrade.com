@@ -2,7 +2,7 @@
 @section('page')
     <div class="panel-heading clearfix">
         <div class="pull-left">
-            <i class="fa fa-key"></i> Reset Password
+            <i class="fa fa-key"></i> @lang('lang.en.unify.personal-office.auth.passwords.reset.title')
         </div>
         <div class="pull-right">
             <a href="{{ route('personal-office.login') }}">
@@ -51,7 +51,7 @@
             </div>
             <div class="form-group" style="margin-top: 25px">
                 <button type="submit" class="btn btn-block btn-primary">
-                    <i class="fa fa-random"></i> Reset Password
+                    <i class="fa fa-random"></i> @lang('lang.en.unify.personal-office.auth.passwords.reset.title')
                 </button>
             </div>
         </form>

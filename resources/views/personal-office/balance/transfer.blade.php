@@ -66,7 +66,7 @@
 
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label for="type_balance" class="control-label">Transfer</label>
+                            <label for="type_balance" class="control-label">@lang('lang.en.personal-office.balance.transfer.title')</label>
                             <select name="type_balance" id="type_balance" class="form-control form-select"
                                     data-placeholder="Type balance..."
                                     required>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary" type="submit">Transfer</button>
+                        <button class="btn btn-primary" type="submit">@lang('lang.en.personal-office.balance.transfer.title')</button>
                     </div>
 
                     {{Form::close()}}
@@ -112,7 +112,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Transfer</th>
+                            <th>@lang('lang.en.personal-office.balance.transfer.title')</th>
                             <th>Method</th>
                             <th>Amount</th>
                             <th>Commission</th>

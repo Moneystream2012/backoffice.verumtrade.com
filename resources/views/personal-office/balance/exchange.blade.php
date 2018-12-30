@@ -33,12 +33,12 @@
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label">Exchange</label>
+                            <label class="control-label">@lang('lang.en.personal-office.balance.exchange.title')</label>
                             <input type="text" class="form-control" value="Balance USD => Balance VMC" disabled/>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary" type="submit">Exchange</button>
+                        <button class="btn btn-primary" type="submit">@lang('lang.en.personal-office.balance.exchange.title')</button>
                     </div>
                     {{Form::close()}}
                 </div>
@@ -51,7 +51,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Exchange</th>
+                            <th>@lang('lang.en.personal-office.balance.exchange.title')</th>
                             <th>Amount</th>
                             <th>Date</th>
                         </tr>

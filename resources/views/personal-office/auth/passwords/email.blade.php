@@ -2,7 +2,7 @@
 @section('page')
     <div class="panel-heading clearfix">
         <div class="pull-left">
-            <i class="fa fa-key"></i> Forgot your password?
+            <i class="fa fa-key"></i> @lang('lang.en.personal-office.auth.passwords.reset.title')
         </div>
         <div class="pull-right">
             <a href="{{ route('personal-office.login') }}">

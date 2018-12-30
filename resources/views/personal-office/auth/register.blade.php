@@ -42,7 +42,7 @@
 
 	<div class="panel-heading clearfix">
 		<div class="pull-left">
-			<i class="fa fa-plus-circle"></i> Sign up
+			<i class="fa fa-plus-circle"></i> @lang('lang.en.personal-office.auth.register.title')
 		</div>
 		<div class="pull-right">
 			<a href="{{ route('personal-office.login') }}">

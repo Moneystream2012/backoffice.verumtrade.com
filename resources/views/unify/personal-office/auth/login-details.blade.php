@@ -2,7 +2,7 @@
 @section('page')
 	<div class="panel-heading clearfix">
 		<div class="pull-left">
-			<i class="fa fa-plus-circle"></i> Login Details
+			<i class="fa fa-plus-circle"></i> @lang('lang.en.unify.personal-office.auth.login-details.title')
 		</div>
 		<div class="pull-right">
 			<a href="{{ route('personal-office.login') }}">
