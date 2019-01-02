@@ -9,7 +9,7 @@
     <div class="container-fluid-md">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">New exchange</h3>
+                <h3 class="panel-title">@lang('lang.en.personal-office.balance.exchange.new_exchange')</h3>
             </div>
             <div class="panel-body">
                 @if (count($errors) > 0)
@@ -24,7 +24,7 @@
                     <input type="hidden" name="type" value="exchange">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="amount" class="control-label">Amount</label>
+                            <label for="amount" class="control-label">@lang('lang.en.personal-office.balance.exchange.amount')</label>
                             <input type="text" class="form-control money" placeholder="0.00" autocomplete="off"
                                    name="amount"
                                    required/>
@@ -52,8 +52,8 @@
                         <tr>
                             <th>#</th>
                             <th>@lang('lang.en.personal-office.balance.exchange.title')</th>
-                            <th>Amount</th>
-                            <th>Date</th>
+                            <th>@lang('lang.en.personal-office.balance.exchange.amount')</th>
+                            <th>@lang('lang.en.personal-office.balance.exchange.date')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -69,7 +69,7 @@
                         @empty
                             <tr>
                                 <td colspan="4">
-                                    <p class="text-center text-muted no-margin-bottom">Empty</p>
+                                    <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.balance.exchange.empty')</p>
                                 </td>
                             </tr>
                         @endforelse

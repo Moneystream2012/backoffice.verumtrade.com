@@ -6,7 +6,7 @@
         </div>
         <div class="pull-right">
             <a href="{{ route('personal-office.login') }}">
-                <i class="fa fa-lock"></i> Sign in
+                <i class="fa fa-lock"></i> @lang('lang.en.personal-office.auth.passwords.email.sign_in')
             </a>
         </div>
     </div>
@@ -17,7 +17,7 @@
             {{ csrf_field() }}
 
             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="email">E-mail <span class="text-danger"> *</span></label>
+                <label for="email">@lang('lang.en.personal-office.auth.passwords.email.email') <span class="text-danger"> *</span></label>
                 <input type="email" autofocus="autofocus" class="form-control" autocomplete="off" name="email"
                        id="email" placeholder="E-mail Address" value="{{ old('email') }}">
                 @if ($errors->has('email'))
@@ -29,7 +29,7 @@
 
             <div class="form-group" style="margin-top: 25px">
                 <button type="submit" class="btn btn-block btn-primary">
-                    <i class="fa fa-send"></i> Send Password Reset Link
+                    <i class="fa fa-send"></i> @lang('lang.en.personal-office.auth.passwords.email.reset_password')
                 </button>
             </div>
         </form>

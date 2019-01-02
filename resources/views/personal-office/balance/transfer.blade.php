@@ -35,7 +35,7 @@
     <div class="container-fluid-md">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">New transfer</h3>
+                <h3 class="panel-title">@lang('lang.en.personal-office.balance.transfer.new_transfer')</h3>
 
             </div>
             <div class="panel-body">
@@ -49,7 +49,7 @@
                 <div class="alert alert-no-border alert-warning">
                     <div class="row">
                         <div class="col-sm-4">
-                            <strong>Transfer tax</strong> <br>
+                            <strong>@lang('lang.en.personal-office.balance.transfer.tax')</strong> <br>
                             0.5%
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     {{Form::open(['route'=> 'personal-office.balance.transfer.post'])}}
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label for="user" class="control-label">Member ID</label>
+                            <label for="user" class="control-label">@lang('lang.en.personal-office.balance.transfer.member_id')</label>
                             <input type="text" class="form-control" name="user" value="{{old('user')}}"
                                    autocomplete="off" required>
                         </div>
@@ -71,28 +71,28 @@
                                     data-placeholder="Type balance..."
                                     required>
                                 <option value=""></option>
-                                <option value="balance">Balance USD</option>
-                                <option value="mining_balance">Balance VMC</option>
+                                <option value="balance">@lang('lang.en.personal-office.balance.transfer.balance') USD</option>
+                                <option value="mining_balance">@lang('lang.en.personal-office.balance.transfer.balance') VMC</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="form-group">
-                            <label for="amount" class="control-label">Amount USD</label>
+                            <label for="amount" class="control-label">@lang('lang.en.personal-office.balance.transfer.amount') USD</label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount"
                                    onkeyup="$().calculator(this, 0.005)" autocomplete="off" required/>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="form-group">
-                            <label for="transaction_password" class="control-label">Transaction password</label>
+                            <label for="transaction_password" class="control-label">@lang('lang.en.personal-office.balance.transfer.transaction_password')</label>
                             <input type="password" class="form-control" name="transaction_password" placeholder="******"
                                    autocomplete="off" required>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="form-group">
-                            <label class="control-label">Discounted</label>
+                            <label class="control-label">@lang('lang.en.personal-office.balance.transfer.discounted')</label>
                             <input type="text" class="form-control discounted" placeholder="0.00" disabled/>
                         </div>
                     </div>
@@ -113,10 +113,10 @@
                         <tr>
                             <th>#</th>
                             <th>@lang('lang.en.personal-office.balance.transfer.title')</th>
-                            <th>Method</th>
-                            <th>Amount</th>
-                            <th>Commission</th>
-                            <th>Date</th>
+                            <th>@lang('lang.en.personal-office.balance.transfer.method')</th>
+                            <th>@lang('lang.en.personal-office.balance.transfer.amount')</th>
+                            <th>@lang('lang.en.personal-office.balance.transfer.commission')</th>
+                            <th>@lang('lang.en.personal-office.balance.transfer.date')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -134,7 +134,7 @@
                         @empty
                             <tr>
                                 <td colspan="6">
-                                    <p class="text-center text-muted no-margin-bottom">Empty</p>
+                                    <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.balance.transfer.empty')</p>
                                 </td>
                             </tr>
                         @endforelse

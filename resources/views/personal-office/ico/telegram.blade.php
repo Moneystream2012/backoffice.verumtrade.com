@@ -86,7 +86,7 @@
                                 @format_usd($amount_invest)
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">All Amount Invest</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.ico.telegram.invest_amount')</h4>
                             </header>
                         </div>
                     </div>
@@ -97,10 +97,10 @@
                     <div class="panel-body panel-body-default">
                         <div class="metric-content metric-icon">
                             <div class="value">
-                                Processing
+                                @lang('lang.en.personal-office.ico.telegram.processing')
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">Tokens</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.ico.telegram.tokens')</h4>
                             </header>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">New Investment</h3>
+                <h3 class="panel-title">@lang('lang.en.personal-office.ico.telegram.new_investment')</h3>
             </div>
             <div class="panel-body">
                 @if (count($errors) > 0)
@@ -122,7 +122,7 @@
                 <div class="alert alert-no-border alert-warning">
                     <div class="row">
                         <div class="col-sm-6">
-                            <strong>Min Amount</strong> <br>
+                            <strong>@lang('lang.en.personal-office.ico.telegram.min_amount')</strong> <br>
                             @format_usd(5000)
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                     <input type="hidden" name="ico_type" value="telegram">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="amount" class="control-label">Amount USD</label>
+                            <label for="amount" class="control-label">@lang('lang.en.personal-office.ico.telegram.amount') USD</label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount"
                                    autocomplete="off" required/>
                         </div>
@@ -140,16 +140,16 @@
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label">Payment Method</label>
+                            <label class="control-label">@lang('lang.en.personal-office.ico.telegram.payment')</label>
                             <select name="payment_method" class="form-control" required>
-                                <option value="">Select an Option</option>
-                                <option value="balance">Balance USD</option>
-                                <option value="mining_balance">Balance VMC</option>
+                                <option value="">@lang('lang.en.personal-office.ico.telegram.option')</option>
+                                <option value="balance">@lang('lang.en.personal-office.ico.telegram.balance') USD</option>
+                                <option value="mining_balance">@lang('lang.en.personal-office.ico.telegram.balance') VMC</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary disabled" type="submit">Invest</button>
+                        <button class="btn btn-primary disabled" type="submit">@lang('lang.en.personal-office.ico.telegram.imvest')</button>
                     </div>
                     {{Form::close()}}
                 </div>
@@ -163,9 +163,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Amount</th>
-                            <th>Method</th>
-                            <th>Date</th>
+                            <th>@lang('lang.en.personal-office.ico.telegram.amount')</th>
+                            <th>@lang('lang.en.personal-office.ico.telegram.method')</th>
+                            <th>@lang('lang.en.personal-office.ico.telegram.date')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -179,7 +179,7 @@
                         @empty
                             <tr>
                                 <td colspan="4">
-                                    <p class="text-center text-muted no-margin-bottom">Empty</p>
+                                    <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.ico.telegram.empty')</p>
                                 </td>
                             </tr>
                         @endforelse
