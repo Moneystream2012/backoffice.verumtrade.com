@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputPrice" class="col-sm-4 control-label">@lang('lang.en.personal-office.active_member.')Price</label>
+					<label for="inputPrice" class="col-sm-4 control-label">@lang('lang.en.personal-office.active_member.price')</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="inputPrice" value="44 USD" disabled>
 					</div>

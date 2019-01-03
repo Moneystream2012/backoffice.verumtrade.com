@@ -38,7 +38,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">New replenishment</h3>
+                <h3 class="panel-title">@lang('lang.en.personal-office.replenishment.new_replenishment')</h3>
             </div>
 
             <div class="panel-body">
@@ -63,11 +63,11 @@
                     {{--</div>--}}
                     <div class="row">
                         <div class="col-sm-3">
-                            <strong>Minimum value</strong> <br>
+                            <strong>@lang('lang.en.personal-office.replenishment.min_value')</strong> <br>
                             <span id="min">{{$min}}</span>
                         </div>
                         <div class="col-sm-3">
-                            <strong>Replenishment tax </strong> <br>
+                            <strong>@lang('lang.en.personal-office.replenishment.tax') </strong> <br>
                             <span id="percent">{{$coefficient}}</span>
                         </div>
                     </div>
@@ -78,19 +78,19 @@
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="amount" class="control-label">Amount <span id="amount_currency"></span></label>
+                            <label for="amount" class="control-label">@lang('lang.en.personal-office.replenishment.amount') <span id="amount_currency"></span></label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount" required autocomplete="off"/>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="replenishment_method" class="control-label">Replenishment method</label>
+                            <label for="replenishment_method" class="control-label">@lang('lang.en.personal-office.replenishment.replenishment_method')</label>
                             <select name="replenishment_method" id="replenishment_method" class="form-control" required>
-                                <option value="">Select an Option</option>
-                                <option value="bitcoin">Bitcoin (altcoins)</option>
-                                <option value="perfect_money">Perfect Money</option>
-                                <option value="free_kassa">FreeKassa</option>
+                                <option value="">@lang('lang.en.personal-office.replenishment.select_option')</option>
+                                <option value="bitcoin">@lang('lang.en.personal-office.replenishment.bitcoin')</option>
+                                <option value="perfect_money">@lang('lang.en.personal-office.replenishment.perfect_money')</option>
+                                <option value="free_kassa">@lang('lang.en.personal-office.replenishment.free_kassa')</option>
                                 {{--<option value="yandex-money">Yandex Money (Visa/MasterCard)</option>--}}
                                 {{--<option value="verumcoin">Verumcoin</option>--}}
                                 {{--<option value="advcash">AdvCash</option>--}}
@@ -99,12 +99,12 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="replenishment_method" class="control-label">Type balance</label>
+                            <label for="replenishment_method" class="control-label">@lang('lang.en.personal-office.replenishment.type_balance')</label>
                             <select name="replenishment_balance" class="form-control" id="replenishment_balance" required>
-                                <option value="">Select an Option</option>
-                                <option value="usd_balance">Balance USD</option>
-                                <option value="usd_mining_balance">Balance VMC</option>
-                                <option value="btc_balance">Balance BTC</option>
+                                <option value="">@lang('lang.en.personal-office.replenishment.select_option')</option>
+                                <option value="usd_balance">@lang('lang.en.personal-office.replenishment.balance') USD</option>
+                                <option value="usd_mining_balance">@lang('lang.en.personal-office.replenishment.balance') VMC</option>
+                                <option value="btc_balance">@lang('lang.en.personal-office.replenishment.balance') BTC</option>
                             </select>
                         </div>
                     </div>
@@ -125,11 +125,11 @@
                         <tr>
                             <th>#</th>
                             <th>@lang('lang.en.personal-office.replenishment.title')</th>
-                            <th>Amount</th>
-                            <th>Commission</th>
-                            <th>Currency</th>
-                            <th>Status</th>
-                            <th>Date</th>
+                            <th>@lang('lang.en.personal-office.replenishment.amount')</th>
+                            <th>@lang('lang.en.personal-office.replenishment.commission')</th>
+                            <th>@lang('lang.en.personal-office.replenishment.currency')</th>
+                            <th>@lang('lang.en.personal-office.replenishment.status')</th>
+                            <th>@lang('lang.en.personal-office.replenishment.date')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -150,7 +150,7 @@
                         @empty
                             <tr>
                                 <td colspan="8">
-                                    <p class="text-center text-muted no-margin-bottom">Empty</p>
+                                    <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.replenishment.empty')</p>
                                 </td>
                             </tr>
                         @endforelse

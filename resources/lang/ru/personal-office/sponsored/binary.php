@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'title'      => 'Бинарный',
+    'title' => 'Бинарный',
     'menu_title' => 'Бинарный',
+    'network' => 'Моя сеть',
 ];
