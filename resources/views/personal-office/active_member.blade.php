@@ -8,13 +8,13 @@
 			<div class="panel-body form-horizontal">
 
 				<div class="form-group">
-					<label for="inputPackage" class="col-sm-4 control-label">Package Name</label>
+					<label for="inputPackage" class="col-sm-4 control-label">@lang('lang.en.personal-office.active_member.package_name')</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="inputPackage" value="Activation Package" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputPrice" class="col-sm-4 control-label">Price</label>
+					<label for="inputPrice" class="col-sm-4 control-label">@lang('lang.en.personal-office.active_member.')Price</label>
 					<div class="col-sm-4">
 						<input type="text" class="form-control" id="inputPrice" value="44 USD" disabled>
 					</div>

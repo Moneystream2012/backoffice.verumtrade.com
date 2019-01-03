@@ -7,11 +7,11 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-xs-6">
-							<label for="id">Member ID:</label>
+							<label for="id">@lang('lang.en.personal-office.sponsored.login-details.id')</label>
 							<input type="text" class="form-control" id="id" value="{{ $user->id }}" readonly>
 						</div>
 						<div class="col-xs-6">
-							<label for="username">Username:</label>
+							<label for="username">@lang('lang.en.personal-office.sponsored.login-details.username')</label>
 							<input type="text" class="form-control" id="username" value="{{ $user->username }}"
 							       readonly>
 						</div>
@@ -21,11 +21,11 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-xs-6">
-							<label for="email">E-Mail:</label>
+							<label for="email">@lang('lang.en.personal-office.sponsored.login-details.email')</label>
 							<input type="text" class="form-control" id="email" value="{{ $user->email }}" readonly>
 						</div>
 						<div class="col-xs-6">
-							<label for="mobile-number">Mobile number:</label>
+							<label for="mobile-number">@lang('lang.en.personal-office.sponsored.login-details.mobile_number')</label>
 							<input type="text" class="form-control" id="mobile-number"
 							       value="{{ $user->mobile_number }}" readonly>
 						</div>
@@ -35,12 +35,12 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-xs-6">
-							<label for="password">Password:</label>
+							<label for="password">@lang('lang.en.personal-office.sponsored.login-details.password')</label>
 							<input type="text" class="form-control" id="password" value="{{ $user->password }}"
 							       readonly>
 						</div>
 						<div class="col-xs-6">
-							<label for="transaction_password">Transaction password:</label>
+							<label for="transaction_password">@lang('lang.en.personal-office.sponsored.login-details.transaction_password')</label>
 							<input type="text" class="form-control" id="transaction_password"
 							       value="{{ $user->transaction_password }}" readonly>
 						</div>
@@ -50,7 +50,7 @@
 
 			</div>
 			<div class="panel-footer margin-lg-top hidden">
-				<a href="" class="btn btn-round btn-default btn-sm">Back</a>
+				<a href="" class="btn btn-round btn-default btn-sm">@lang('lang.en.personal-office.sponsored.login-details.back')</a>
 			</div>
 		</div>
 

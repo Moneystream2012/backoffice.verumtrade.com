@@ -10,7 +10,7 @@
                                 @if(isset($users['parent']))
                                     <div>
                                         <a href="{{route('personal-office.sponsored.binary')}}" class="link-down">
-                                            <i class="fa fa-chevron-circle-up"></i> My Network
+                                            <i class="fa fa-chevron-circle-up"></i> @lang('lang.en.personal-office.sponsored.binary.network')
                                         </a>
                                     </div>
                                     <div>
