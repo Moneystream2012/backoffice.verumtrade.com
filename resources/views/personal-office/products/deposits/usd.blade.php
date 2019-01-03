@@ -44,9 +44,8 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><i class="fa fa-list-alt text-success"></i> List Products</h4>
-                        <p class="alert alert-info"><span class="text-danger">*</span> The interest tax may vary from
-                            15% to 25%</p>
+                        <h4 class="panel-title"><i class="fa fa-list-alt text-success"></i> @lang('lang.en.personal-office.products.deposits.usd.product_list')</h4>
+                        <p class="alert alert-info"><span class="text-danger">*</span> @lang('lang.en.personal-office.products.deposits.usd.tax_vary')</p>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -59,31 +58,31 @@
                                             class="product-body product-body-{{$product->count ?? 0 > 0 ? '1' : '0'}}">
                                     <span
                                         class="label product-label product-label-{{$product->count ?? 0 > 0 ? '1' : '0'}}"> {{$product->count ?? 0}} </span>
-                                            <span class="label-title">Count</span>
+                                            <span class="label-title">@lang('lang.en.personal-office.products.deposits.usd.count')</span>
                                             <ul class="list-group no-margin">
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">Number of payments</span>
+                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.usd.payments_number')</span>
                                                     <span class="pull-right">{{$product->payout_count}}</span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">Payout</span>
-                                                    <span class="pull-right">1 month</span>
+                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.usd.payout')</span>
+                                                    <span class="pull-right">@lang('lang.en.personal-office.products.deposits.usd.month')</span>
                                                 </li>
                                                 <li class="list-group-item">
                                                             <span
-                                                                class="text-muted">Forecasting percent per month <span
+                                                                class="text-muted">@lang('lang.en.personal-office.products.deposits.usd.percent') <span
                                                                     class="text-danger">*</span> </span>
                                                     <span class="pull-right">{{$product->percent}} %</span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted"> Clear forecasting profit <span
+                                                    <span class="text-muted"> @lang('lang.en.personal-office.products.deposits.usd.clear') <span
                                                             class="text-danger">*</span></span>
                                                     <span class="pull-right">
                                                         {{formatUSD($product->payout)}} {{$currency}}
                                                     </span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">Overall forecasting profit <span
+                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.usd.overall') <span
                                                             class="text-danger">*</span></span>
                                                     <span class="pull-right">
                                                         {{formatUSD($product->payout + $product->price)}} {{$currency}}
@@ -114,7 +113,7 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><i class="fa fa-briefcase text-success"></i> My products</h4>
+                        <h4 class="panel-title"><i class="fa fa-briefcase text-success"></i> @lang('lang.en.personal-office.products.deposits.usd.my_products')</h4>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -123,13 +122,13 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Number of</th>
-                                        <th>Profit</th>
-                                        <th>Diff Days</th>
-                                        <th>Calculate date</th>
-                                        <th>Create date</th>
-                                        <th>Final date</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.name')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.number_of')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.profit')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.diff_days')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.calculate')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.create')</th>
+                                        <th>@lang('lang.en.personal-office.products.deposits.usd.final')</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -161,7 +160,7 @@
                                     @empty
                                         <tr>
                                             <td colspan="8">
-                                                <p class="text-center text-muted no-margin-bottom">Empty</p>
+                                                <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.products.deposits.usd.empty')</p>
                                             </td>
                                         </tr>
                                     @endforelse
