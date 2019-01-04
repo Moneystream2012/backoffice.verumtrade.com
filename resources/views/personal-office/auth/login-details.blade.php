@@ -2,31 +2,31 @@
 @section('page')
 	<div class="panel-heading clearfix">
 		<div class="pull-left">
-			<i class="fa fa-plus-circle"></i> Login Details
+			<i class="fa fa-plus-circle"></i> @lang('lang.en.personal-office.auth.login.title')
 		</div>
 		<div class="pull-right">
 			<a href="{{ route('personal-office.login') }}">
-				<i class="fa fa-lock"></i> Sign in
+				<i class="fa fa-lock"></i> @lang('lang.en.personal-office.auth.login.sign_in')
 			</a>
 		</div>
 	</div>
 	<div class="panel-body">
 		<div class="alert alert-success alert-dismissible" role="alert">
-			<strong>Registration is almost complete!</strong>
+			<strong>@lang('lang.en.personal-office.auth.login.registration')</strong>
 			<ol style="margin: 0;padding-left: 13px;">
-				<li>Confirm your email: <b>{{ $user->email }}</b></li>
-				<li>Save your personal information!</li>
+				<li>@lang('lang.en.personal-office.auth.login.email_confirm'): <b>{{ $user->email }}</b></li>
+				<li>@lang('lang.en.personal-office.auth.login.save')</li>
 			</ol>
 		</div>
 
 		<div class="form-group">
 			<div class="row">
 				<div class="col-xs-6">
-					<label for="id">Member ID:</label>
+					<label for="id">@lang('lang.en.personal-office.auth.login.id'):</label>
 					<input type="text" class="form-control input-lg" id="id" value="{{ $user->id }}" readonly>
 				</div>
 				<div class="col-xs-6">
-					<label for="username">Username:</label>
+					<label for="username">@lang('lang.en.personal-office.auth.login.username'):</label>
 					<input type="text" class="form-control input-lg" id="username" value="{{ $user->username }}"
 						   readonly>
 				</div>
@@ -36,11 +36,11 @@
 		<div class="form-group">
 			<div class="row">
 				<div class="col-xs-6">
-					<label for="email">E-Mail:</label>
+					<label for="email">@lang('lang.en.personal-office.auth.login.email'):</label>
 					<input type="text" class="form-control input-lg" id="email" value="{{ $user->email }}" readonly>
 				</div>
 				<div class="col-xs-6">
-					<label for="mobile-number">Mobile number:</label>
+					<label for="mobile-number">@lang('lang.en.personal-office.auth.login.mobile_number'):</label>
 					<input type="text" class="form-control input-lg" id="mobile-number"
 						   value="{{ $user->mobile_number }}" readonly>
 				</div>
@@ -50,12 +50,12 @@
 		<div class="form-group">
 			<div class="row">
 				<div class="col-xs-6">
-					<label for="password">Password:</label>
+					<label for="password">@lang('lang.en.personal-office.auth.login.password'):</label>
 					<input type="text" class="form-control input-lg" id="password" value="{{ $user->password }}"
 						   readonly>
 				</div>
 				<div class="col-xs-6">
-					<label for="transaction_password">Transaction password:</label>
+					<label for="transaction_password">@lang('lang.en.personal-office.auth.login.transaction_password'):</label>
 					<input type="text" class="form-control input-lg" id="transaction_password"
 						   value="{{ $user->transaction_password }}" readonly>
 				</div>
