@@ -4,4 +4,8 @@ return [
     'title' => 'Dashboard',
     'description' => 'Detailed information',
     'icon' => 'icon-th-large',
+    'invest' => 'Invest',
+    'price' => 'Price',
+    'turnover' => 'Turnover',
+    'bonus' => 'Bonus',
 ];

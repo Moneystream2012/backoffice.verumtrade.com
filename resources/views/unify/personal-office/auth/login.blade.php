@@ -2,11 +2,11 @@
 @section('page')
     <div class="panel-heading clearfix">
         <div class="pull-left">
-            <i class="fa fa-lock"></i> Sign in
+            <i class="fa fa-lock"></i> @lang('lang.en.unify.personal-office.auth.login.sign_in')
         </div>
         <div class="pull-right">
             <a href="{{ route('personal-office.register') }}">
-                <i class="fa fa-plus-circle"></i> Sign up
+                <i class="fa fa-plus-circle"></i> @lang('lang.en.unify.personal-office.auth.login.sign_up')
             </a>
         </div>
     </div>
@@ -17,7 +17,7 @@
               action="{{ route('personal-office.login.post') }}">
             {{ csrf_field() }}
             <div class="form-group {{ $errors->has('username_or_uid') ? ' has-error' : '' }}">
-                <label for="username_or_uid">Username/Member ID</label>
+                <label for="username_or_uid">@lang('lang.en.unify.personal-office.auth.login.id')</label>
                 <input type="text" autocomplete="off" autofocus="autofocus" class="form-control" name="username_or_uid"
                        id="username_or_uid"
                        autocomplete="off"
@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password">Password </label>
+                <label for="password">@lang('lang.en.unify.personal-office.auth.login.password') </label>
                 <input type="password" autocomplete="off" class="form-control" name="password" id="password"
                        placeholder="******">
 
@@ -44,12 +44,12 @@
                 <div class="pull-left">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> @lang('lang.en.unify.personal-office.auth.login.remember_me')
                         </label>
                     </div>
                 </div>
                 <div class="pull-right" style="margin-top: 10px">
-                    <a href="{{route('personal-office.password-reset')}}">Forgot your password?</a>
+                    <a href="{{route('personal-office.password-reset')}}">@lang('lang.en.unify.personal-office.auth.login.forgot_password')</a>
                 </div>
             </div>
             <hr>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-xs-6">
                         <a href="/sign_up" class="btn btn-block btn-default">
-                            <i class="fa fa-user"></i> Create account
+                            <i class="fa fa-user"></i> @lang('lang.en.unify.personal-office.auth.login.create_account')
                         </a>
                     </div>
 

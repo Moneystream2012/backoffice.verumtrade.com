@@ -2,7 +2,7 @@
 
 @endpush
 
-<a class="btn btn-flat btn-success dropdown-toggle " data-toggle="dropdown">Payment <span class="caret"></span></a>
+<a class="btn btn-flat btn-success dropdown-toggle " data-toggle="dropdown">@lang('lang.en.unify.personal-office.partials.payment.btc.payment') <span class="caret"></span></a>
 
 <ul class="dropdown-menu">
     <li>
@@ -13,7 +13,7 @@
             data-price="{{$product->price ?? 0}}"
             data-plan="{{$product->id ?? 0}}"
             data-service="{{$service ?? ''}}">
-            Balance {{$product->currency}}
+            @lang('lang.en.unify.personal-office.partials.payment.btc.balance') {{$product->currency}}
         </a>
     </li>
 </ul>

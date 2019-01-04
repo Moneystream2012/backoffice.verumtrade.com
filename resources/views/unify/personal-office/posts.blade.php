@@ -8,10 +8,10 @@
                     <div class="card-body">
                         <ul class="nav nav-tabs justify-content-end" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tab-en-{{$item->id}}" role="tab" aria-controls="tab-en-{{$item->id}}" aria-selected="true" aria-expanded="true">English</a>
+                                <a class="nav-link active" data-toggle="tab" href="#tab-en-{{$item->id}}" role="tab" aria-controls="tab-en-{{$item->id}}" aria-selected="true" aria-expanded="true">@lang('lang.en.unify.personal-office.posts.english')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tab-ru-{{$item->id}}" role="tab" aria-controls="tab-ru-{{$item->id}}" aria-selected="false" aria-expanded="false">Russian</a>
+                                <a class="nav-link" data-toggle="tab" href="#tab-ru-{{$item->id}}" role="tab" aria-controls="tab-ru-{{$item->id}}" aria-selected="false" aria-expanded="false">@lang('lang.en.unify.personal-office.posts.russian')</a>
                             </li>
                         </ul>
                         <div class="tab-content">
