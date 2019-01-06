@@ -54,9 +54,9 @@
                         </div>
                         <button class="btn btn-primary"
                                 {{ $issue->is_baned_send ? 'disabled' : ''}}
-                                type="submit">@lang('lang.en.unify.personal-office.issues.show.submit')
+                                type="submit">@lang('unify.personal-office.issues.show.submit')
                         </button>
-                        <a href="{{route('personal-office.issues.index')}}" class="btn btn-outline-light">@lang('lang.en.unify.personal-office.issues.show.back')</a>
+                        <a href="{{route('personal-office.issues.index')}}" class="btn btn-outline-light">@lang('unify.personal-office.issues.show.back')</a>
                     </form>
                 </div>
             </div>

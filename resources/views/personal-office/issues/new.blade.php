@@ -26,8 +26,8 @@
 
 						</div>
 						<div class="panel-footer">
-							<button class="btn btn-primary" type="submit">@lang('lang.en.personal-office.issues.new.submit')</button>
-							<a href="{{route('personal-office.issues.index')}}" class="btn btn-default">@lang('lang.en.personal-office.issues.new.back')</a>
+							<button class="btn btn-primary" type="submit">@lang('personal-office.issues.new.submit')</button>
+							<a href="{{route('personal-office.issues.index')}}" class="btn btn-default">@lang('personal-office.issues.new.back')</a>
 						</div>
 
 					</form>

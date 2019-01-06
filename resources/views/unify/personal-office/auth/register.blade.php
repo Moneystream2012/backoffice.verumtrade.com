@@ -67,11 +67,11 @@
 
     <div class="panel-heading clearfix">
         <div class="pull-left">
-            <i class="fa fa-plus-circle"></i> @lang('lang.en.unify.personal-office.auth.register.title')
+            <i class="fa fa-plus-circle"></i> @lang('unify.personal-office.auth.register.title')
         </div>
         <div class="pull-right">
             <a href="{{ route('personal-office.login') }}">
-                <i class="fa fa-lock"></i> @lang('lang.en.unify.personal-office.auth.register.sign_in')
+                <i class="fa fa-lock"></i> @lang('unify.personal-office.auth.register.sign_in')
             </a>
         </div>
     </div>
@@ -81,7 +81,7 @@
             {{ csrf_field() }}
 
             <div class="form-group {{ $errors->has('first_name') || $errors->has('last_name')  ? ' has-error' : '' }}">
-                <label for="first_name">@lang('lang.en.unify.personal-office.auth.register.name') <span class="text-danger"> *</span></label>
+                <label for="first_name">@lang('unify.personal-office.auth.register.name') <span class="text-danger"> *</span></label>
                 <div class="row">
                     <div class="col-xs-6">
                         <input type="text" class="form-control" name="first_name" id="first_name"
@@ -103,7 +103,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('username') ? ' has-error' : '' }}">
-                <label for="username">@lang('lang.en.unify.personal-office.auth.register.username') <span class="text-danger"> *</span></label>
+                <label for="username">@lang('unify.personal-office.auth.register.username') <span class="text-danger"> *</span></label>
                 <input type="text" class="form-control" name="username" id="username" value="{{ old('username') }}"
                        placeholder="User Name" autocomplete="off" required>
                 @if ($errors->has('username'))
@@ -114,7 +114,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="email">@lang('lang.en.unify.personal-office.auth.register.email') <span class="text-danger"> *</span></label>
+                <label for="email">@lang('unify.personal-office.auth.register.email') <span class="text-danger"> *</span></label>
                 <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"
                        placeholder="E-mail Address" autocomplete="off" required>
                 @if ($errors->has('email'))
@@ -126,14 +126,14 @@
 
             <div class="form-group {{ $errors->has('mobile_number') ? ' has-error' : '' }}">
                 <input type="hidden" name="mobile_code" id="mobile_code" value="UA">
-                <label for="mobile_number">@lang('lang.en.unify.personal-office.auth.register.mobile_number')</label>
+                <label for="mobile_number">@lang('unify.personal-office.auth.register.mobile_number')</label>
                 <div class="row" id="send-sms-number">
                     <div class="col-xs-7">
                         <input type="tel" name="mobile_number" class="form-control" id="mobile_number"
                                value="{{ old('mobile_number') }}" autocomplete="off" required>
                     </div>
                     <div class="col-xs-5">
-                        <button class="btn btn-primary btn-block" id="btn-send-code" type="button" disabled>@lang('lang.en.unify.personal-office.auth.register.send_code')
+                        <button class="btn btn-primary btn-block" id="btn-send-code" type="button" disabled>@lang('unify.personal-office.auth.register.send_code')
                         </button>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('sms_code') ? ' has-error' : '' }}">
-                <label for="sms_code">@lang('lang.en.unify.personal-office.auth.register.sms') <span class="text-danger"> *</span></label>
+                <label for="sms_code">@lang('unify.personal-office.auth.register.sms') <span class="text-danger"> *</span></label>
                 <input type="text" name="sms_code" class="form-control" placeholder="SMS Code" id="sms_code"
                        value="{{ old('sms_code') }}" autocomplete="off" required>
                 @if ($errors->has('sms_code'))
@@ -156,7 +156,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('sponsor') ? ' has-error' : '' }}">
-                <label for="sponsor">@lang('lang.en.unify.personal-office.auth.register.sponsor') <span class="text-danger"> *</span></label>
+                <label for="sponsor">@lang('unify.personal-office.auth.register.sponsor') <span class="text-danger"> *</span></label>
                 <input type="text" class="form-control" id="sponsor" name="sponsor"
                        @if(old('sponsor')) value="{{ old('sponsor') }}" @else value="{{$sponsor}}"
                        @endif placeholder="Sponsor Name" autocomplete="off" required>
@@ -169,7 +169,7 @@
 
             <div
                 class="form-group {{ $errors->has('password') || $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <label for="password">@lang('lang.en.unify.personal-office.auth.register.password') <span class="text-danger"> *</span></label>
+                <label for="password">@lang('unify.personal-office.auth.register.password') <span class="text-danger"> *</span></label>
                 <div class="row">
                     <div class="col-xs-6">
                         <input type="password" class="form-control" name="password" id="password"
@@ -189,7 +189,7 @@
             </div>
 
             <div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
-                <label for="country" class="control-label">@lang('lang.en.unify.personal-office.auth.register.country')</label>
+                <label for="country" class="control-label">@lang('unify.personal-office.auth.register.country')</label>
                 <select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
                         name="country"
                         id="country"
@@ -206,8 +206,8 @@
 
             <div class="form-group  {{ $errors->has('terms') ? ' has-error' : '' }}">
                 <div class="checkbox">
-                    <label><input type="checkbox" name="terms"> @lang('lang.en.unify.personal-office.auth.register.agree') <a href="#terms" data-toggle="modal"
-                                                                           data-target="#terms">@lang('lang.en.unify.personal-office.auth.register.terms')</a></label>
+                    <label><input type="checkbox" name="terms"> @lang('unify.personal-office.auth.register.agree') <a href="#terms" data-toggle="modal"
+                                                                           data-target="#terms">@lang('unify.personal-office.auth.register.terms')</a></label>
                 </div>
                 @if ($errors->has('terms'))
                     <span class="help-block">
@@ -218,7 +218,7 @@
 
             <div class="form-group  {{ $errors->has('18_years') ? ' has-error' : '' }}">
                 <div class="checkbox">
-                    <label><input type="checkbox" name="18_years"> @lang('lang.en.unify.personal-office.auth.register.18_years')</label>
+                    <label><input type="checkbox" name="18_years"> @lang('unify.personal-office.auth.register.18_years')</label>
                 </div>
                 @if ($errors->has('18_years'))
                     <span class="help-block">
@@ -238,7 +238,7 @@
             <hr>
             <div class="form-group">
                 <button type="submit" class="btn btn-block btn-primary">
-                    <i class="fa fa-save"></i> @lang('lang.en.unify.personal-office.auth.register.create_member')
+                    <i class="fa fa-save"></i> @lang('unify.personal-office.auth.register.create_member')
                 </button>
             </div>
             {{--@captcha(App::getLocale())--}}
@@ -252,7 +252,7 @@
                     @include('terms_en')
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">@lang('lang.en.unify.personal-office.auth.register.close')</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">@lang('unify.personal-office.auth.register.close')</button>
                 </div>
             </div>
         </div>

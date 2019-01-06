@@ -41,8 +41,8 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><i class="fa fa-list-alt text-success"></i> @lang('lang.en.personal-office.products.deposits.deposits.product_list')</h4>
-                        <p class="alert alert-info"><span class="text-danger">*</span> @lang('lang.en.personal-office.products.deposits.deposits.tax_vary')</p>
+                        <h4 class="panel-title"><i class="fa fa-list-alt text-success"></i> @lang('personal-office.products.deposits.deposits.product_list')</h4>
+                        <p class="alert alert-info"><span class="text-danger">*</span> @lang('personal-office.products.deposits.deposits.tax_vary')</p>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -55,29 +55,29 @@
                                             class="product-body product-body-{{$product->count ?? 0 > 0 ? '1' : '0'}}">
                                     <span
                                         class="label product-label product-label-{{$product->count ?? 0 > 0 ? '1' : '0'}}"> {{$product->count ?? 0}} </span>
-                                            <span class="label-title">@lang('lang.en.personal-office.products.deposits.deposits.count')</span>
+                                            <span class="label-title">@lang('personal-office.products.deposits.deposits.count')</span>
                                             <ul class="list-group no-margin">
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.payments_number')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.payments_number')</span>
                                                     <span class="pull-right">{{$product->payout_count}}</span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.payout')</span>
-                                                    <span class="pull-right">@lang('lang.en.personal-office.products.deposits.deposits.month')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.payout')</span>
+                                                    <span class="pull-right">@lang('personal-office.products.deposits.deposits.month')</span>
                                                 </li>
                                                 <li class="list-group-item">
                                                             <span
-                                                                class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.percent') <span class="text-danger">*</span> </span>
+                                                                class="text-muted">@lang('personal-office.products.deposits.deposits.percent') <span class="text-danger">*</span> </span>
                                                     <span class="pull-right">{{$product->percent}} %</span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted"> @lang('lang.en.personal-office.products.deposits.deposits.clear') <span class="text-danger">*</span></span>
+                                                    <span class="text-muted"> @lang('personal-office.products.deposits.deposits.clear') <span class="text-danger">*</span></span>
                                                     <span class="pull-right">
                                                         {{formatUSD($product->payout)}}
                                                     </span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.overall') <span class="text-danger">*</span></span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.overall') <span class="text-danger">*</span></span>
                                                     <span class="pull-right">
                                                         {{formatUSD($product->payout + $product->price)}} BTC
                                                     </span>
@@ -107,7 +107,7 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><i class="fa fa-briefcase text-success"></i> @lang('lang.en.personal-office.products.deposits.deposits.my_products')</h4>
+                        <h4 class="panel-title"><i class="fa fa-briefcase text-success"></i> @lang('personal-office.products.deposits.deposits.my_products')</h4>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -119,14 +119,14 @@
                                                 {{$item->calculate_at->diffInDays()}}
                                             </span>
 
-                                            <span class="label-title">@lang('lang.en.personal-office.products.deposits.deposits.calculate_diff')</span>
+                                            <span class="label-title">@lang('personal-office.products.deposits.deposits.calculate_diff')</span>
                                             <ul class="list-group no-margin">
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.id')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.id')</span>
                                                     <span class="pull-right">{{$item->id}}</span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.name')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.name')</span>
                                                     <span class="pull-right">{{$item->product['name']}}</span>
                                                 </li>
                                                 {{--<li class="list-group-item">
@@ -134,14 +134,14 @@
                                                     <span class="pull-right">@format_usd($item->product['payout'])</span>
                                                 </li>--}}
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.number_of')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.number_of')</span>
                                                     <span class="pull-right">
                                                         {{$item->number_of}} /
                                                         {{$item->product['payout_count']}}
                                                     </span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.profit')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.profit')</span>
                                                     <span class="pull-right">@format_usd($item->profit)</span>
                                                 </li>
                                                 {{--<li class="list-group-item">
@@ -149,7 +149,7 @@
                                                     <span class="pull-right">@format_usd($item->available_amount_transfer)</span>
                                                 </li>--}}
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.calculate')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.calculate')</span>
                                                     <span class="pull-right">
                                                         <a href="javascript:;" data-toggle="tooltip"
                                                            data-placement="top"
@@ -157,7 +157,7 @@
                                                     </span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.create')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.create')</span>
                                                     <span class="pull-right">
                                                         <a href="javascript:;" data-toggle="tooltip"
                                                            data-placement="top"
@@ -165,7 +165,7 @@
                                                     </span>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <span class="text-muted">@lang('lang.en.personal-office.products.deposits.deposits.final')</span>
+                                                    <span class="text-muted">@lang('personal-office.products.deposits.deposits.final')</span>
                                                     <span class="pull-right">
                                                                 <a href="javascript:;" data-toggle="tooltip"
                                                                    data-placement="top"
@@ -222,7 +222,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">@lang('lang.en.personal-office.products.deposits.deposits.output')</h4>
+                        <h4 class="modal-title">@lang('personal-office.products.deposits.deposits.output')</h4>
                     </div>
                     <div class="modal-body">
                         {{ Form::open(['route' => 'personal-office.products.deposits.transfer']) }}
@@ -234,10 +234,10 @@
                                        required autocomplete="off" placeholder="0.00">
 
                                 <div class="input-group-btn">
-                                    <button tabindex="-1" class="btn btn-primary" type="submit">@lang('lang.en.personal-office.products.deposits.deposits.get')</button>
+                                    <button tabindex="-1" class="btn btn-primary" type="submit">@lang('personal-office.products.deposits.deposits.get')</button>
                                 </div>
                             </div>
-                            <p class="help-block small text-muted margin-xs-vertical">@lang('lang.en.personal-office.products.deposits.deposits.available') <strong><span
+                            <p class="help-block small text-muted margin-xs-vertical">@lang('personal-office.products.deposits.deposits.available') <strong><span
                                         id="available_amount_transfer">0.00</span> $</strong></p>
                         </div>
                         {{Form::close()}}

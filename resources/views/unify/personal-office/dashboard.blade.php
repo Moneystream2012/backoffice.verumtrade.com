@@ -39,7 +39,7 @@
                                     <!-- Row start -->
                                     <ul class="row no-gutters align-items-center">
                                         <li class="col-7">
-                                            <h6 class="title">@lang('lang.en.unify.personal-office.dashboard.invest') Token USD</h6>
+                                            <h6 class="title">@lang('unify.personal-office.dashboard.invest') Token USD</h6>
                                         </li>
                                         <li class="col-5">
                                             <h4 class="total">
@@ -66,7 +66,7 @@
                                     <!-- Row start -->
                                     <ul class="row no-gutters align-items-center">
                                         <li class="col-7">
-                                            <h6 class="title">@lang('lang.en.unify.personal-office.dashboard.invest') Global USD</h6>
+                                            <h6 class="title">@lang('unify.personal-office.dashboard.invest') Global USD</h6>
                                         </li>
                                         <li class="col-5">
                                             <h4 class="total">
@@ -95,7 +95,7 @@
                             <small class="text-muted">VMC/USD</small>
                         </div>
                         <div class="col text-right">
-                            <span class="text-muted">@lang('lang.en.unify.personal-office.dashboard.price') Verumcoin</span>
+                            <span class="text-muted">@lang('unify.personal-office.dashboard.price') Verumcoin</span>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                     <i class="icon-flow-tree"></i>
                 </div>
                 <h5>{{formatUSD($turnover->direct_all ?? 0.00)}}</h5>
-                <p>@lang('lang.en.unify.personal-office.dashboard.turnover') USD</p>
+                <p>@lang('unify.personal-office.dashboard.turnover') USD</p>
             </a>
         </div>
         <div class="col">
@@ -139,7 +139,7 @@
                     <i class="icon-gift"></i>
                 </div>
                 <h5>{{formatUSD($turnover->direct_total ?? 0.00)}}</h5>
-                <p>@lang('lang.en.unify.personal-office.dashboard.bonus') USD</p>
+                <p>@lang('unify.personal-office.dashboard.bonus') USD</p>
             </a>
         </div>
     </div>

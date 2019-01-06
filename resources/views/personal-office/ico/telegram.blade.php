@@ -68,7 +68,7 @@
                             <hr>
                             <div class="margin-top">
                                 <center>
-                                    <h3><i class="fa fa-send" style="color: #0088cc;"></i>@lang('lang.en.personal-office.ico.telegram.title')</h3>
+                                    <h3><i class="fa fa-send" style="color: #0088cc;"></i>@lang('personal-office.ico.telegram.title')</h3>
                                     {!! $chart->html() !!}
                                 </center>
                             </div>
@@ -86,7 +86,7 @@
                                 @format_usd($amount_invest)
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.ico.telegram.invest_amount')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.ico.telegram.invest_amount')</h4>
                             </header>
                         </div>
                     </div>
@@ -97,10 +97,10 @@
                     <div class="panel-body panel-body-default">
                         <div class="metric-content metric-icon">
                             <div class="value">
-                                @lang('lang.en.personal-office.ico.telegram.processing')
+                                @lang('personal-office.ico.telegram.processing')
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.ico.telegram.tokens')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.ico.telegram.tokens')</h4>
                             </header>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">@lang('lang.en.personal-office.ico.telegram.new_investment')</h3>
+                <h3 class="panel-title">@lang('personal-office.ico.telegram.new_investment')</h3>
             </div>
             <div class="panel-body">
                 @if (count($errors) > 0)
@@ -122,7 +122,7 @@
                 <div class="alert alert-no-border alert-warning">
                     <div class="row">
                         <div class="col-sm-6">
-                            <strong>@lang('lang.en.personal-office.ico.telegram.min_amount')</strong> <br>
+                            <strong>@lang('personal-office.ico.telegram.min_amount')</strong> <br>
                             @format_usd(5000)
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                     <input type="hidden" name="ico_type" value="telegram">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="amount" class="control-label">@lang('lang.en.personal-office.ico.telegram.amount') USD</label>
+                            <label for="amount" class="control-label">@lang('personal-office.ico.telegram.amount') USD</label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount"
                                    autocomplete="off" required/>
                         </div>
@@ -140,16 +140,16 @@
 
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label">@lang('lang.en.personal-office.ico.telegram.payment')</label>
+                            <label class="control-label">@lang('personal-office.ico.telegram.payment')</label>
                             <select name="payment_method" class="form-control" required>
-                                <option value="">@lang('lang.en.personal-office.ico.telegram.option')</option>
-                                <option value="balance">@lang('lang.en.personal-office.ico.telegram.balance') USD</option>
-                                <option value="mining_balance">@lang('lang.en.personal-office.ico.telegram.balance') VMC</option>
+                                <option value="">@lang('personal-office.ico.telegram.option')</option>
+                                <option value="balance">@lang('personal-office.ico.telegram.balance') USD</option>
+                                <option value="mining_balance">@lang('personal-office.ico.telegram.balance') VMC</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn btn-primary disabled" type="submit">@lang('lang.en.personal-office.ico.telegram.imvest')</button>
+                        <button class="btn btn-primary disabled" type="submit">@lang('personal-office.ico.telegram.imvest')</button>
                     </div>
                     {{Form::close()}}
                 </div>
@@ -163,9 +163,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>@lang('lang.en.personal-office.ico.telegram.amount')</th>
-                            <th>@lang('lang.en.personal-office.ico.telegram.method')</th>
-                            <th>@lang('lang.en.personal-office.ico.telegram.date')</th>
+                            <th>@lang('personal-office.ico.telegram.amount')</th>
+                            <th>@lang('personal-office.ico.telegram.method')</th>
+                            <th>@lang('personal-office.ico.telegram.date')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -179,7 +179,7 @@
                         @empty
                             <tr>
                                 <td colspan="4">
-                                    <p class="text-center text-muted no-margin-bottom">@lang('lang.en.personal-office.ico.telegram.empty')</p>
+                                    <p class="text-center text-muted no-margin-bottom">@lang('personal-office.ico.telegram.empty')</p>
                                 </td>
                             </tr>
                         @endforelse

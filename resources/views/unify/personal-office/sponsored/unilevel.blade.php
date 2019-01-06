@@ -87,7 +87,7 @@
                 <div class="card-body dd" id="unilevel">
                 @if(isset($search))
                     <h4><a href="{{route('personal-office.sponsored.unilevel')}}"
-                           class="btn btn-primary btn-xs margin-right"><i class="fa fa-reply"></i></a>@lang('lang.en.unify.personal-office.sponsored.unilevel.search')
+                           class="btn btn-primary btn-xs margin-right"><i class="fa fa-reply"></i></a>@lang('unify.personal-office.sponsored.unilevel.search')
                     </h4>
                     <hr class="margin-sm-top">
                 @endif
@@ -95,7 +95,7 @@
                         @if(count($sponsors) > 0)
                             @include('unify.personal-office.partials.unilevel.items')
                         @else
-                            <p class="text-center text-muted m-auto">@lang('lang.en.unify.personal-office.sponsored.unilevel.no_sponsor')</p>
+                            <p class="text-center text-muted m-auto">@lang('unify.personal-office.sponsored.unilevel.no_sponsor')</p>
                         @endif
                     </ul>
                 </div>

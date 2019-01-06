@@ -25,58 +25,58 @@
 				<div class="row hidden">
 					<div class="col-md-12">
 						<div class="btn-group btn-group-sm pull-left">
-							<p class="small text-muted margin-xs-vertical">@lang('lang.en.personal-office.history.date_filter')</p>
+							<p class="small text-muted margin-xs-vertical">@lang('personal-office.history.date_filter')</p>
 							<a href="{{route('personal-office.history', [
 									'category' => $category
-							])}}" class="btn btn-default btn">@lang('lang.en.personal-office.history.all')</a>
+							])}}" class="btn btn-default btn">@lang('personal-office.history.all')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => $category,
 									'date' => 'yesterday'
-							])}}" class="btn btn-default @if($date == 'yesterday') active @endif">@lang('lang.en.personal-office.history.yesterday')</a>
+							])}}" class="btn btn-default @if($date == 'yesterday') active @endif">@lang('personal-office.history.yesterday')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => $category,
 									'date' => 'today'
-							])}}" class="btn btn-default @if($date == 'today') active @endif">@lang('lang.en.personal-office.history.today')</a>
+							])}}" class="btn btn-default @if($date == 'today') active @endif">@lang('personal-office.history.today')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => $category,
 									'date' => 'week'
-							])}}" class="btn btn-default @if($date == 'week') active @endif"@lang('lang.en.personal-office.history.week')></a>
+							])}}" class="btn btn-default @if($date == 'week') active @endif"@lang('personal-office.history.week')></a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => $category,
 									'date' => 'month'
-							])}}" class="btn btn-default @if($date == 'month') active @endif">@lang('lang.en.personal-office.history.month')</a>
+							])}}" class="btn btn-default @if($date == 'month') active @endif">@lang('personal-office.history.month')</a>
 						</div>
 
 						<div class="btn-group btn-group-sm pull-right">
-							<p class="small text-muted margin-xs-vertical">@lang('lang.en.personal-office.history.type_filter')</p>
+							<p class="small text-muted margin-xs-vertical">@lang('personal-office.history.type_filter')</p>
 							<a href="{{route('personal-office.history', [
 									'category' => 0,
 									'date'     => $date,
-							])}}" class="btn btn-default">@lang('lang.en.personal-office.history.all')</a>
+							])}}" class="btn btn-default">@lang('personal-office.history.all')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => 1,
 									'date'     => $date,
-							])}}" class="btn btn-default @if($category == 1) active @endif">@lang('lang.en.personal-office.history.payments')</a>
+							])}}" class="btn btn-default @if($category == 1) active @endif">@lang('personal-office.history.payments')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => 2,
 									'date'     => $date,
-							])}}" class="btn btn-default @if($category == 2) active @endif">@lang('lang.en.personal-office.history.transfer')</a>
+							])}}" class="btn btn-default @if($category == 2) active @endif">@lang('personal-office.history.transfer')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => 3,
 									'date'     => $date,
-							])}}" class="btn btn-default @if($category == 3) active @endif">@lang('lang.en.personal-office.history.profits')</a>
+							])}}" class="btn btn-default @if($category == 3) active @endif">@lang('personal-office.history.profits')</a>
 
 							<a href="{{route('personal-office.history', [
 									'category' => 4,
 									'date'     => $date,
-							])}}" class="btn btn-default @if($category == 4) active @endif">@lang('lang.en.personal-office.history.requests')</a>
+							])}}" class="btn btn-default @if($category == 4) active @endif">@lang('personal-office.history.requests')</a>
 						</div>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 								</div>
 							</ul>
 						@else
-							<p class="text-muted margin-vertical text-center">@lang('lang.en.personal-office.history.empty')</p>
+							<p class="text-muted margin-vertical text-center">@lang('personal-office.history.empty')</p>
 						@endif
 
 					</div>

@@ -7,7 +7,7 @@
                     {{csrf_field()}}
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="inputTitle" class="control-label">@lang('lang.en.unify.personal-office.issues.new.title')</label>
+                            <label for="inputTitle" class="control-label">@lang('unify.personal-office.issues.new.title')</label>
                             <input type="text" name="title"
                                    class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
                                    id="inputTitle"
@@ -18,7 +18,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputBody" class="control-label">@lang('lang.en.unify.personal-office.issues.new.text')</label>
+                            <label for="inputBody" class="control-label">@lang('unify.personal-office.issues.new.text')</label>
                             <textarea name="body"
                                       class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
                                       id="inputBody"
@@ -29,8 +29,8 @@
                                 <span class="form-text text-danger">{{ $errors->first('body') }}</span>
                             @endif
                         </div>
-                        <button class="btn btn-primary" type="submit">@lang('lang.en.unify.personal-office.issues.new.submit')</button>
-                        <a href="{{route('personal-office.issues.index')}}" class="btn btn-outline-light">@lang('lang.en.unify.personal-office.issues.new.back')</a>
+                        <button class="btn btn-primary" type="submit">@lang('unify.personal-office.issues.new.submit')</button>
+                        <a href="{{route('personal-office.issues.index')}}" class="btn btn-outline-light">@lang('unify.personal-office.issues.new.back')</a>
                     </div>
                 </form>
             </div>

@@ -25,7 +25,7 @@
 							</div>
 						</div>
 					@empty
-						<p class="text-center text-muted">@lang('lang.en.personal-office.issues.show.empty')</p>
+						<p class="text-center text-muted">@lang('personal-office.issues.show.empty')</p>
 					@endforelse
 
 					<div class="panel-body padding-md-vertical">
@@ -46,7 +46,7 @@
 									<button class="btn btn-primary margin-sm-right"
 									        {{ $issue->is_baned_send ? 'disabled' : ''}} type="submit">Submit
 									</button>
-									<a href="{{route('personal-office.issues.index')}}" class="btn btn-default">@lang('lang.en.personal-office.issues.show.back')</a>
+									<a href="{{route('personal-office.issues.index')}}" class="btn btn-default">@lang('personal-office.issues.show.back')</a>
 								</div>
 							</form>
 						</div>

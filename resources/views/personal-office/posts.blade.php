@@ -8,8 +8,8 @@
                 </div>
                 <div class="panel-body">
                     <ul class="nav nav-pills navbar-right">
-                        <li class="active"><a data-toggle="tab" href="#tab-en-{{$item->id}}">@lang('lang.en.personal-office.posts.english')</a></li>
-                        <li><a data-toggle="tab" href="#tab-ru-{{$item->id}}">@lang('lang.en.personal-office.posts.russian')</a></li>
+                        <li class="active"><a data-toggle="tab" href="#tab-en-{{$item->id}}">@lang('personal-office.posts.english')</a></li>
+                        <li><a data-toggle="tab" href="#tab-ru-{{$item->id}}">@lang('personal-office.posts.russian')</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-en-{{$item->id}}" class="tab-pane active">

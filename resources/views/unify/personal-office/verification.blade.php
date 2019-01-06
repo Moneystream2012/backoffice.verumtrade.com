@@ -56,27 +56,27 @@
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.id'): {{$auth->id}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.username'): {{$auth->username}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.email'): {{$auth->email}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.sponsor'): {{$auth->sponsor_username}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.country'): {{$auth->country_name}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.mobile_number'): {{  }}$auth->mobile_number_format}}</li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.status'): <strong class="text-{{$auth->verified ? 'secondary' : 'warning'}}">{{$verification->status_text}}</strong></li>
-                    <li class="list-group-item">@lang('lang.en.unify.personal-office.verification.date'): @format_date($verification->verification_at)</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.id'): {{$auth->id}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.username'): {{$auth->username}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.email'): {{$auth->email}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.sponsor'): {{$auth->sponsor_username}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.country'): {{$auth->country_name}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.mobile_number'): {{  }}$auth->mobile_number_format}}</li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.status'): <strong class="text-{{$auth->verified ? 'secondary' : 'warning'}}">{{$verification->status_text}}</strong></li>
+                    <li class="list-group-item">@lang('unify.personal-office.verification.date'): @format_date($verification->verification_at)</li>
                 </ul>
             </div>
 
         </div>
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header text-center">@lang('lang.en.unify.personal-office.verification.edit')</div>
+                <div class="card-header text-center">@lang('unify.personal-office.verification.edit')</div>
                 <div class="card-body">
                     <form role="form" action="{{route('personal-office.verification.update')}}" method="post"
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="inputFirstName" class="control-label">@lang('lang.en.unify.personal-office.verification.first_name')</label>
+                            <label for="inputFirstName" class="control-label">@lang('unify.personal-office.verification.first_name')</label>
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
@@ -89,7 +89,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputLastName" class="control-label">@lang('lang.en.unify.personal-office.verification.last_name')</label>
+                            <label for="inputLastName" class="control-label">@lang('unify.personal-office.verification.last_name')</label>
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
@@ -103,7 +103,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="mobile_number" class="control-label">@lang('lang.en.unify.personal-office.verification.mobile_number')</label>
+                            <label for="mobile_number" class="control-label">@lang('unify.personal-office.verification.mobile_number')</label>
                             <input type="hidden" name="mobile_code" id="mobile_code" value="UA">
                             <input type="tel" name="mobile_number"
                                    class="form-control {{ $errors->has('mobile_number') ? ' is-invalid' : '' }}"
@@ -117,7 +117,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="email" class="control-label">@lang('lang.en.unify.personal-office.verification.email')</label>
+                            <label for="email" class="control-label">@lang('unify.personal-office.verification.email')</label>
                             <input type="text" name="email"
                                    class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}"
                                    id="email"
@@ -131,7 +131,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="country" class="control-label">@lang('lang.en.unify.personal-office.verification.country')</label>
+                            <label for="country" class="control-label">@lang('unify.personal-office.verification.country')</label>
                             <select
                                 class="form-control form-chosen form-select2 {{ $errors->has('country') ? ' is-invalid' : '' }}" data-placeholder="Choose a Country..."
                                 name="country"
@@ -147,7 +147,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputAvatar">@lang('lang.en.unify.personal-office.verification.avatar')</label>
+                            <label for="inputAvatar">@lang('unify.personal-office.verification.avatar')</label>
                             <input type="file" class="form-control {{ $errors->has('avatar') ? 'is-invalid' : '' }}" name="avatar" id="inputAvatar"
                                    accept="image/jpeg,image/png,image/jpg"
                                    required
@@ -155,11 +155,11 @@
                             @if ($errors->has('avatar'))
                                 <span class="form-text text-danger">{{ $errors->first('avatar') }}</span>
                             @endif
-                            <small class="form-text text-muted">@lang('lang.en.unify.personal-office.verification.allowed_file')
+                            <small class="form-text text-muted">@lang('unify.personal-office.verification.allowed_file')
                             </small>
                         </div>
                         <div class="form-group">
-                            <label for="inputAvatar">@lang('lang.en.unify.personal-office.verification.passport')</label>
+                            <label for="inputAvatar">@lang('unify.personal-office.verification.passport')</label>
                             <input type="file" class="form-control {{ $errors->has('doc_img') ? 'is-invalid' : '' }}" name="doc_img" id="inputAvatar"
                                    accept="image/jpeg,image/png,image/jpg"
                                    required
@@ -167,11 +167,11 @@
                             @if ($errors->has('doc_img'))
                                 <span class="form-text text-danger">{{ $errors->first('doc_img') }}</span>
                             @endif
-                            <small class="form-text text-muted">@lang('lang.en.unify.personal-office.verification.allowed_file')
+                            <small class="form-text text-muted">@lang('unify.personal-office.verification.allowed_file')
                             </small>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword" class="control-label">@lang('lang.en.unify.personal-office.verification.password')</label>
+                            <label for="inputPassword" class="control-label">@lang('unify.personal-office.verification.password')</label>
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"

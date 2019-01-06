@@ -36,7 +36,7 @@
                         <div class="dd" id="unilevel">
                             @if(isset($search))
                                 <h4><a href="{{route('personal-office.sponsored.unilevel')}}"
-                                       class="btn btn-primary btn-xs margin-right"><i class="fa fa-reply"></i></a>@lang('lang.en.personal-office.sponsored.unilevel.search')
+                                       class="btn btn-primary btn-xs margin-right"><i class="fa fa-reply"></i></a>@lang('personal-office.sponsored.unilevel.search')
                                 </h4>
                                 <hr class="margin-sm-top">
                             @endif
@@ -44,7 +44,7 @@
                                 @if(count($users) > 0)
                                     @include('include.unilevel.items')
                                 @else
-                                    <p class="text-center text-muted margin-lg-vertical">@lang('lang.en.personal-office.sponsored.unilevel.referrals')</p>
+                                    <p class="text-center text-muted margin-lg-vertical">@lang('personal-office.sponsored.unilevel.referrals')</p>
                                 @endif
                             </ol>
                         </div>

@@ -4,7 +4,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{route('personal-office.issues.new')}}" class="btn btn-primary">@lang('lang.en.unify.personal-office.issues.index.create')</a>
+                    <a href="{{route('personal-office.issues.new')}}" class="btn btn-primary">@lang('unify.personal-office.issues.index.create')</a>
                 </div>
                 <div class="card-body">
                     <div class="list-group">

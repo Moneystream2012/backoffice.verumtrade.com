@@ -43,7 +43,7 @@
                                 {{--<small class="text-muted"></small>--}}
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.balance') USD
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.balance') USD
                                 </h4>
                             </header>
                         </div>
@@ -60,7 +60,7 @@
                                 {{formatUSD(VMCtoUSD($auth->mining_balance))}} USD
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.balance') VMC</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.balance') VMC</h4>
                             </header>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 {{formatUSD(BTCtoUSD($auth->btc_balance))}} USD
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.balance') BTC</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.balance') BTC</h4>
                             </header>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                                 <i class="fa fa-suitcase"></i>
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.plan')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.plan')</h4>
                             </header>
                         </div>
                     </div>
@@ -110,11 +110,11 @@
                                 <small>@format_usd($next_rank['reward'])</small>
                             </div>
                             <div class="icon">
-                                <span class="text-muted">@lang('lang.en.personal-office.dashboard.binary')</span> {{formatUSD($next_rank['binary'])}} <br>
-                                <span class="text-muted">@lang('lang.en.personal-office.dashboard.direct')</span> {{formatUSD($next_rank['direct'])}}
+                                <span class="text-muted">@lang('personal-office.dashboard.binary')</span> {{formatUSD($next_rank['binary'])}} <br>
+                                <span class="text-muted">@lang('personal-office.dashboard.direct')</span> {{formatUSD($next_rank['direct'])}}
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.next_rank')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.next_rank')</h4>
                             </header>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                                 <i class="fa fa-toggle-{{$auth->team_developer ? 'on' : 'off'}}"></i>
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.team_developer')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.team_developer')</h4>
                             </header>
                         </div>
                     </div>
@@ -142,13 +142,13 @@
                     <div class="panel-body panel-body-default">
                         <div class="metric-content metric-icon">
                             <div class="value" style="font-size: 17px">
-                                @lang('lang.en.personal-office.dashboard.user') {{$user->sponsors()->count()}}
+                                @lang('personal-office.dashboard.user') {{$user->sponsors()->count()}}
                             </div>
                             <div class="icon">
                                 <i class="fa fa-users"></i>
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.sponsor')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.sponsor')</h4>
                             </header>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                                 <i class="fa fa-gift"></i>
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.overall')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.overall')</h4>
                             </header>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                                 <i class="fa fa-cubes"></i>
                             </div>
                             <header>
-                                <h4 class="thin text-muted padding-sm-vertical">@lang('lang.en.personal-office.dashboard.matching')</h4>
+                                <h4 class="thin text-muted padding-sm-vertical">@lang('personal-office.dashboard.matching')</h4>
                             </header>
                         </div>
                     </div>
@@ -194,14 +194,14 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">@lang('lang.en.personal-office.dashboard.turnover_direct') USD</h4>
+                        <h4 class="panel-title">@lang('personal-office.dashboard.turnover_direct') USD</h4>
                     </div>
                     <table class="table table-banded table-condensed table-responsive">
                         <thead>
                         <tr>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.week')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.week')</th>
                             <th></th>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.total')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.total')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -213,9 +213,9 @@
                         </tbody>
                         <thead>
                         <tr>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.all')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.all')</th>
                             <th></th>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.total')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.total')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -231,14 +231,14 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">@lang('lang.en.personal-office.dashboard.binary') USD</h4>
+                        <h4 class="panel-title">@lang('personal-office.dashboard.binary') USD</h4>
                     </div>
                     <table class="table table-banded table-condensed table-responsive">
                         <thead>
                         <tr>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.week')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.week')</th>
                             <th class="text-center"></th>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.total')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.total')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -251,9 +251,9 @@
                         </tbody>
                         <thead>
                         <tr>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.all')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.all')</th>
                             <th></th>
-                            <th class="text-center">@lang('lang.en.personal-office.dashboard.total')</th>
+                            <th class="text-center">@lang('personal-office.dashboard.total')</th>
                         </tr>
                         </thead>
                         <tbody>
