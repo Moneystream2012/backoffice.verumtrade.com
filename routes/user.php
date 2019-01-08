@@ -38,6 +38,7 @@ Route::group([
         'auth:user',
         'session_timeout',
         'user_blocked',
+        'locale',
     ],
 ], function () {
     Route::get('/', 'User\DashboardController@index')->name('dashboard');
@@ -50,7 +51,7 @@ Route::group([
 
     Route::get('profile', 'User\ProfileController@index')->name('profile');
     Route::post('profile', 'User\ProfileController@update')->name('profile.update');
-//  Route::get('profile/social_account/{provider}', 'User\ProfileController@remove_social_account')->name('profile.remove_social_account');
+    //  Route::get('profile/social_account/{provider}', 'User\ProfileController@remove_social_account')->name('profile.remove_social_account');
 
     Route::group([
         'prefix' => 'sponsored',
@@ -85,7 +86,6 @@ Route::group([
         Route::any('/pay/{replenishment}', 'User\ReplenishmentPayController@pay')->name('pay');
         Route::post('/', 'User\ReplenishmentPayController@replenish')->name('post');
     });
-
 
     Route::group([
         'prefix' => 'finance',
