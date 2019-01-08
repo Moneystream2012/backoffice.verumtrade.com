@@ -47,15 +47,15 @@
 							<h3>{{$auth->full_name}}</h3>
 
 							<dl class="margin-sm-bottom">
-								<dt>@lang('personal-office.profile.created_at')</dt>
+								<dt>@lang('personal-office/profile.created_at')</dt>
 								<dd>{{$auth->created_at}}</dd>
 							</dl>
 							<dl class="margin-sm-bottom">
-								<dt>@lang('personal-office.profile.updated_at')</dt>
+								<dt>@lang('personal-office/profile.updated_at')</dt>
 								<dd>{{$auth->updated_at ?? '-'}}</dd>
 							</dl>
 							<dl class="margin-sm-bottom">
-								<dt>@lang('personal-office.profile.last_login_at')</dt>
+								<dt>@lang('personal-office/profile.last_login_at')</dt>
 								<dd>{{$auth->last_login_at}}</dd>
 							</dl>
 						</div>
@@ -63,21 +63,21 @@
 					<div class="panel-body">
 						<div class="col-xs-6">
 							<dl>
-								<dt>@lang('personal-office.profile.id')</dt>
+								<dt>@lang('personal-office/profile.id')</dt>
 								<dd>{{$auth->id}}</dd>
 							</dl>
 							<dl class="margin-sm-bottom">
-								<dt>@lang('personal-office.profile.username')</dt>
+								<dt>@lang('personal-office/profile.username')</dt>
 								<dd>{{$auth->username}}</dd>
 							</dl>
 						</div>
 						<div class="col-xs-6">
 							<dl>
-								<dt>@lang('personal-office.profile.email')</dt>
+								<dt>@lang('personal-office/profile.email')</dt>
 								<dd>{{$auth->email}}</dd>
 							</dl>
 							<dl class="margin-sm-bottom">
-								<dt>@lang('personal-office.profile.sponsor')</dt>
+								<dt>@lang('personal-office/profile.sponsor')</dt>
 								<dd>{{$auth->sponsor()->value('username') ?? '-'}}</dd>
 							</dl>
 						</div>
@@ -143,14 +143,14 @@
 			<div class="col-md-7">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h4 class="panel-title">@lang('personal-office.profile.user_data')</h4>
+						<h4 class="panel-title">@lang('personal-office/profile.user_data')</h4>
 					</div>
 					<div class="panel-body">
-						<form role="form" action="{{route('personal-office.profile.update')}}" method="post"
+						<form role="form" action="{{route('personal-office/profile.update')}}" method="post"
 						      enctype="multipart/form-data">
 							{{ csrf_field() }}
 							<div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
-								<label for="inputFirstName" class="control-label">@lang('personal-office.profile.first_name')</label>
+								<label for="inputFirstName" class="control-label">@lang('personal-office/profile.first_name')</label>
 								<input type="text" name="first_name" class="form-control" id="inputFirstName"
 								       placeholder="First Name" value="{{old('first_name') ?? $auth->first_name}}"  autocomplete="off">
 								@if ($errors->has('first_name'))
@@ -158,7 +158,7 @@
 								@endif
 							</div>
 							<div class="form-group {{ $errors->has('last_name') ? ' has-error' : '' }}">
-								<label for="inputLastName" class="control-label">@lang('personal-office.profile.last_name')</label>
+								<label for="inputLastName" class="control-label">@lang('personal-office/profile.last_name')</label>
 								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder="Last Name"
 								       value="{{old('last_name') ?? $auth->last_name}}"  autocomplete="off">
 								@if ($errors->has('last_name'))
@@ -167,7 +167,7 @@
 							</div>
 
 							<div class="form-group hidden {{ $errors->has('email') ? ' has-error' : '' }}">
-								<label for="email" class="control-label">@lang('personal-office.profile.email')</label>
+								<label for="email" class="control-label">@lang('personal-office/profile.email')</label>
 								<input type="email" name="email" class="form-control" id="email" placeholder="Email"
 								       value="{{old('email') ?? $auth->email}}"  autocomplete="off">
 								@if ($errors->has('email'))
@@ -176,7 +176,7 @@
 							</div>
 
 							<div class="form-group {{ $errors->has('mobile_number') ? ' has-error' : '' }}">
-								<label for="mobile_number" class="control-label">@lang('personal-office.profile.mobile_number')</label>
+								<label for="mobile_number" class="control-label">@lang('personal-office/profile.mobile_number')</label>
 								<input type="hidden" name="mobile_code" id="mobile_code" value="UA">
 								<input type="tel" name="mobile_number" class="form-control" id="mobile_number"
 								       value="{{old('mobile_number') ?? $auth->mobile_number }}"  autocomplete="off">
@@ -186,7 +186,7 @@
 							</div>
 
 							<div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
-								<label for="country" class="control-label">@lang('personal-office.profile.country')</label>
+								<label for="country" class="control-label">@lang('personal-office/profile.country')</label>
 								<select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
 								        name="country">
 									@foreach ($countries as $key => $val)
@@ -198,24 +198,24 @@
 								@endif
 							</div>
 							<div class=" hidden form-group{{ $errors->has('avatar') ? ' has-error' : '' }}">
-								<label for="inputAvatar" class="control-label">@lang('personal-office.profile.avatar')</label>
+								<label for="inputAvatar" class="control-label">@lang('personal-office/profile.avatar')</label>
 								<input type="file" class="form-control" name="avatar" id="inputAvatar"
 								       accept="image/jpeg,image/png,image/jpg">
 								@if ($errors->has('country'))
 									<span class="help-block">{{ $errors->first('avatar') }}</span>
 								@endif
-								<span class="help-block">@lang('personal-office.profile.allowed_file')</span>
+								<span class="help-block">@lang('personal-office/profile.allowed_file')</span>
 							</div>
 
 							<div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-								<label for="inputPassword" class="control-label">@lang('personal-office.profile.password')</label>
+								<label for="inputPassword" class="control-label">@lang('personal-office/profile.password')</label>
 								<input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password"  autocomplete="off" required>
 								@if ($errors->has('password'))
 									<span class="help-block">{{ $errors->first('password') }}</span>
 								@endif
 							</div>
 
-							<button class="btn btn-primary" type="submit">@lang('personal-office.profile.update')</button>
+							<button class="btn btn-primary" type="submit">@lang('personal-office/profile.update')</button>
 						</form>
 					</div>
 				</div>

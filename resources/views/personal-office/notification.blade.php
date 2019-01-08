@@ -14,12 +14,12 @@
 						<div class="pull-left margin-left">
 							<strong>{{trans('personal-office/notification.'.snake_case(class_basename($notification->type)), $notification->data) }}</strong><br>
 							@if($notification->data['link'] ?? false)
-								<a class="margin-sm-bottom" href="{{$notification->data['link']}}">@lang('personal-office.notification.look')</a>
+								<a class="margin-sm-bottom" href="{{$notification->data['link']}}">@lang('personal-office/notification.look')</a>
 							@endif
 						</div>
 						<div class="pull-right text-right">
 							@if($notification->read_at == null)
-								<span class="label label-danger ">@lang('personal-office.notification.new')</span> <br>
+								<span class="label label-danger ">@lang('personal-office/notification.new')</span> <br>
 							@endif
 							<small class="text-muted">{{$notification->created_at->format('d/m/Y H:i:s')}}</small>
 						</div>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		@empty
-			<p class="text-center">@lang('personal-office.notification.empty_notifications')</p>
+			<p class="text-center">@lang('personal-office/notification.empty_notifications')</p>
 		@endforelse
 	</div>
 @endsection

@@ -48,7 +48,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
-								<label for="inputFirstName" class="control-label">@lang('personal-office.sponsored.new_member.first_name')</label>
+								<label for="inputFirstName" class="control-label">@lang('personal-office/sponsored/new_member.first_name')</label>
 								<input type="text" name="first_name" class="form-control" id="inputFirstName"
 								       placeholder="First Name"
 								       value="{{ old('first_name') }}" autocomplete="off">
@@ -59,7 +59,7 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('last_name') ? ' has-error' : '' }}">
-								<label for="inputLastName" class="control-label">@lang('personal-office.sponsored.new_member.last_name')</label>
+								<label for="inputLastName" class="control-label">@lang('personal-office/sponsored/new_member.last_name')</label>
 								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder="Last Name"
 								       value="{{ old('last_name') }}" autocomplete="off">
 								@if ($errors->has('last_name'))
@@ -72,7 +72,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('username') ? ' has-error' : '' }}">
-								<label for="username" class="control-label">@lang('personal-office.sponsored.new_member.username')</label>
+								<label for="username" class="control-label">@lang('personal-office/sponsored/new_member.username')</label>
 								<input type="text" name="username" class="form-control"  autocomplete="off" id="username" placeholder="User Name"
 								       value="{{ old('username') }}">
 								@if ($errors->has('username'))
@@ -83,7 +83,7 @@
 
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-								<label for="email" class="control-label">@lang('personal-office.sponsored.new_member.email')</label>
+								<label for="email" class="control-label">@lang('personal-office/sponsored/new_member.email')</label>
 								<input type="email" name="email" class="form-control" id="email"  autocomplete="off" placeholder="Email"
 								       value="{{ old('email') }}">
 								@if ($errors->has('email'))
@@ -96,7 +96,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('mobile_number') ? ' has-error' : '' }}">
-								<label for="mobile_number" class="control-label">@lang('personal-office.sponsored.new_member.mobile_number')</label>
+								<label for="mobile_number" class="control-label">@lang('personal-office/sponsored/new_member.mobile_number')</label>
 								<input type="hidden" name="mobile_code" id="mobile_code" value="UA">
 								<input type="tel" name="mobile_number" class="form-control"  autocomplete="off" id="mobile_number"
 								       value="{{ old('mobile_number') }}">
@@ -107,7 +107,7 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
-								<label for="country" class="control-label">@lang('personal-office.sponsored.new_member.country')</label>
+								<label for="country" class="control-label">@lang('personal-office/sponsored/new_member.country')</label>
 								<select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
 								        name="country"
 								        id="country">
@@ -126,7 +126,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-								<label for="password" class="control-label">@lang('personal-office.sponsored.new_member.password')</label>
+								<label for="password" class="control-label">@lang('personal-office/sponsored/new_member.password')</label>
 								<input type="password" class="form-control" name="password"  autocomplete="off" id="password"
 								       placeholder="Password">
 								@if ($errors->has('password'))
@@ -137,7 +137,7 @@
 						<div class="col-sm-6">
 
 							<div class="form-group {{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-								<label for="password_confirmation" class="control-label">@lang('personal-office.sponsored.new_member.password_confirmation')</label>
+								<label for="password_confirmation" class="control-label">@lang('personal-office/sponsored/new_member.password_confirmation')</label>
 								<input type="password" class="form-control" name="password_confirmation"
 								       id="password_confirmation"
                                        autocomplete="off"
@@ -152,8 +152,8 @@
 				</div>
 				<div class="panel-footer">
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">@lang('personal-office.sponsored.new_member.submit')</button>
-						<a href="{{route('personal-office.sponsored.binary')}}" class="btn btn-white">@lang('personal-office.sponsored.new_member.network')</a>
+						<button type="submit" class="btn btn-primary">@lang('personal-office/sponsored/new_member.submit')</button>
+						<a href="{{route('personal-office.sponsored.binary')}}" class="btn btn-white">@lang('personal-office/sponsored/new_member.network')</a>
 					</div>
 				</div>
 			</div>

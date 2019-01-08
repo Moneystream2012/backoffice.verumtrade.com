@@ -10,7 +10,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">@lang('personal-office.balance.withdraw.new_withdraw')</h3>
+                <h3 class="panel-title">@lang('personal-office/balance/withdraw.new_withdraw')</h3>
             </div>
             <div class="panel-body">
                 @if (count($errors) > 0)
@@ -21,16 +21,16 @@
                     </div>
                 @endif
                 <div class="alert alert-info">
-                    @lang('personal-office.balance.withdraw.request')
+                    @lang('personal-office/balance/withdraw.request')
                 </div>
                 <div class="alert alert-no-border alert-warning">
                     <div class="row">
                         <div class="col-sm-3">
-                            <strong>@lang('personal-office.balance.withdraw.tax')</strong> <br>
+                            <strong>@lang('personal-office/balance/withdraw.tax')</strong> <br>
                             <p>{{$coefficient}}</p>
                         </div>
                         <div class="col-sm-3">
-                            <strong>@lang('personal-office.balance.withdraw.min_amount')</strong> <br>
+                            <strong>@lang('personal-office/balance/withdraw.min_amount')</strong> <br>
                             <p>@format_usd(50)</p>
                         </div>
                     </div>
@@ -40,42 +40,42 @@
 
                     <div class="col-sm-2">
                         <div class="form-group">
-                            <label for="amount" class="control-label">@lang('personal-office.balance.withdraw.amount') USD</label>
+                            <label for="amount" class="control-label">@lang('personal-office/balance/withdraw.amount') USD</label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount" autocomplete="off" required/>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label for="payment_method" class="control-label">@lang('personal-office.balance.withdraw.type')</label>
+                            <label for="payment_method" class="control-label">@lang('personal-office/balance/withdraw.type')</label>
                             <select name="type_withdraw" class="form-control" required>
-                                <option value="">@lang('personal-office.balance.withdraw.option')</option>
-                                <option value="balance-btc">@lang('personal-office.balance.withdraw.balance') USD => BTC</option>
-                                <option value="balance-vmc">@lang('personal-office.balance.withdraw.balance') USD => VMC</option>
-                                <option value="mining_balance-btc">@lang('personal-office.balance.withdraw.balance') VMC => BTC</option>
-                                <option value="mining_balance-vmc">@lang('personal-office.balance.withdraw.balance') VMC => VMC</option>
-                                <option value="btc_balance-btc">@lang('personal-office.balance.withdraw.balance') BTC => BTC</option>
-                                <option value="btc_balance-vmc">@lang('personal-office.balance.withdraw.balance') BTC => VMC</option>
+                                <option value="">@lang('personal-office/balance/withdraw.option')</option>
+                                <option value="balance-btc">@lang('personal-office/balance/withdraw.balance') USD => BTC</option>
+                                <option value="balance-vmc">@lang('personal-office/balance/withdraw.balance') USD => VMC</option>
+                                <option value="mining_balance-btc">@lang('personal-office/balance/withdraw.balance') VMC => BTC</option>
+                                <option value="mining_balance-vmc">@lang('personal-office/balance/withdraw.balance') VMC => VMC</option>
+                                <option value="btc_balance-btc">@lang('personal-office/balance/withdraw.balance') BTC => BTC</option>
+                                <option value="btc_balance-vmc">@lang('personal-office/balance/withdraw.balance') BTC => VMC</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="wallet_address" class="control-label">@lang('personal-office.balance.withdraw.wallet_address')</label>
+                            <label for="wallet_address" class="control-label">@lang('personal-office/balance/withdraw.wallet_address')</label>
                             <input type="text" class="form-control" placeholder="Wallet Address" name="wallet_address"
                                    autocomplete="off" required/>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label for="transaction_password" class="control-label">@lang('personal-office.balance.withdraw.transaction_password')</label>
+                            <label for="transaction_password" class="control-label">@lang('personal-office/balance/withdraw.transaction_password')</label>
                             <input type="password" class="form-control" autocomplete="off" name="transaction_password"
                                    placeholder="******" required>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <button class="btn btn-primary"
-                                {{Carbon\Carbon::now()->isMonday() ?: '_disabled'}} type="submit">@lang('personal-office.balance.withdraw.title')
+                                {{Carbon\Carbon::now()->isMonday() ?: '_disabled'}} type="submit">@lang('personal-office/balance/withdraw.title')
                         </button>
                     </div>
 
@@ -91,14 +91,14 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>@lang('personal-office.balance.withdraw.title')</th>
-                            <th>@lang('personal-office.balance.withdraw.amount')</th>
-                            <th>@lang('personal-office.balance.withdraw.commission')</th>
-                            <th>@lang('personal-office.balance.withdraw.wallet_address')</th>
-                            <th>@lang('personal-office.balance.withdraw.txid')</th>
-                            <th>@lang('personal-office.balance.withdraw.processing')</th>
-                            <th>@lang('personal-office.balance.withdraw.creation')</th>
-                            <th>@lang('personal-office.balance.withdraw.status')</th>
+                            <th>@lang('personal-office/balance/withdraw.title')</th>
+                            <th>@lang('personal-office/balance/withdraw.amount')</th>
+                            <th>@lang('personal-office/balance/withdraw.commission')</th>
+                            <th>@lang('personal-office/balance/withdraw.wallet_address')</th>
+                            <th>@lang('personal-office/balance/withdraw.txid')</th>
+                            <th>@lang('personal-office/balance/withdraw.processing')</th>
+                            <th>@lang('personal-office/balance/withdraw.creation')</th>
+                            <th>@lang('personal-office/balance/withdraw.status')</th>
                         </tr>
                         </thead>
                         <tbody>

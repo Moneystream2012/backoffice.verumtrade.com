@@ -87,7 +87,7 @@
 	<div class="container-fluid-md">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<i class="fa fa-sitemap"></i> @lang('personal-office.sponsored.full.view')
+				<i class="fa fa-sitemap"></i> @lang('personal-office/sponsored/full.view')
 			</div>
 			<div class="panel-body">
 				<div id="full-tree" style="height:800px;"></div>

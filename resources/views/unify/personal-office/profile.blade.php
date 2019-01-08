@@ -49,12 +49,12 @@
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">@lang('unify.personal-office.profile.id'): {{$auth->id}}</li>
-                    <li class="list-group-item">@lang('unify.personal-office.profile.username'): {{$auth->username}}</li>
-                    <li class="list-group-item">@lang('unify.personal-office.profile.email'): {{  }}$auth->email}}</li>
-                    <li class="list-group-item">@lang('unify.personal-office.profile.sponsor'): {{$auth->sponsor()->value('username') ?? '-'}}</li>
-                    <li class="list-group-item">@lang('unify.personal-office.profile.country'): {{$auth->country_name}}</li>
-                    <li class="list-group-item">@lang('unify.personal-office.profile.mobile_number'): {{$auth->mobile_number_format}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.id'): {{$auth->id}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.username'): {{$auth->username}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.email'): {{  }}$auth->email}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.sponsor'): {{$auth->sponsor()->value('username') ?? '-'}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.country'): {{$auth->country_name}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.mobile_number'): {{$auth->mobile_number_format}}</li>
                 </ul>
             </div>
 
@@ -116,7 +116,7 @@
         </div>--}}
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header text-center">@lang('unify.personal-office.profile.edit')</div>
+                <div class="card-header text-center">@lang('unify/personal-office/profile.edit')</div>
                 @if($auth->verified)
                 <p class="p-3 alert-warning text-center mb-0">
                     {{$v_lang->msg['info']}}
@@ -127,7 +127,7 @@
                           enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="inputFirstName" class="control-label">@lang('unify.personal-office.profile.first_name')</label>
+                            <label for="inputFirstName" class="control-label">@lang('unify/personal-office/profile.first_name')</label>
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
@@ -138,7 +138,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputLastName" class="control-label">@lang('unify.personal-office.profile.last_name')</label>
+                            <label for="inputLastName" class="control-label">@lang('unify/personal-office/profile.last_name')</label>
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
@@ -159,7 +159,7 @@
                         </div>--}}
 
                         <div class="form-group">
-                            <label for="mobile_number" class="control-label">@lang('unify.personal-office.profile.mobile_number')</label>
+                            <label for="mobile_number" class="control-label">@lang('unify/personal-office/profile.mobile_number')</label>
                             <input type="hidden" name="mobile_code" id="mobile_code" value="UA">
                             <input type="tel" name="mobile_number"
                                    class="form-control {{ $errors->has('mobile_number') ? ' is-invalid' : '' }}"
@@ -171,7 +171,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="country" class="control-label">@lang('unify.personal-office.profile.country')</label>
+                            <label for="country" class="control-label">@lang('unify/personal-office/profile.country')</label>
                             <select
                                 class="form-control form-chosen form-select2 {{ $errors->has('country') ? ' is-invalid' : '' }}" data-placeholder="Choose a Country..."
                                 name="country">
@@ -185,17 +185,17 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="inputAvatar">@lang('unify.personal-office.profile.avatar')</label>
+                            <label for="inputAvatar">@lang('unify/personal-office/profile.avatar')</label>
                             <input type="file" class="form-control {{ $errors->has('avatar') ? 'is-invalid' : '' }}" name="avatar" id="inputAvatar"
                                    accept="image/jpeg,image/png,image/jpg">
                             @if ($errors->has('avatar'))
                                 <span class="form-text text-danger">{{ $errors->first('avatar') }}</span>
                             @endif
-                            <small class="form-text text-muted">@lang('unify.personal-office.profile.allowed_file')
+                            <small class="form-text text-muted">@lang('unify/personal-office/profile.allowed_file')
                             </small>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword" class="control-label">@lang('unify.personal-office.profile.password')</label>
+                            <label for="inputPassword" class="control-label">@lang('unify/personal-office/profile.password')</label>
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"
@@ -205,7 +205,7 @@
                             @endif
                         </div>
 
-                        <button class="btn btn-block btn-primary" type="submit">@lang('unify.personal-office.profile.save')</button>
+                        <button class="btn btn-block btn-primary" type="submit">@lang('unify/personal-office/profile.save')</button>
                     </form>
                 </div>
             </div>

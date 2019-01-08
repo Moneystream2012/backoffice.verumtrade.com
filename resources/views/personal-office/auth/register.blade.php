@@ -42,11 +42,11 @@
 
 	<div class="panel-heading clearfix">
 		<div class="pull-left">
-			<i class="fa fa-plus-circle"></i> @lang('personal-office.auth.register.title')
+			<i class="fa fa-plus-circle"></i> @lang('personal-office/auth/register.title')
 		</div>
 		<div class="pull-right">
 			<a href="{{ route('personal-office.login') }}">
-				<i class="fa fa-lock"></i> @lang('personal-office.auth.register.sign_in')
+				<i class="fa fa-lock"></i> @lang('personal-office/auth/register.sign_in')
 			</a>
 		</div>
 	</div>
@@ -56,7 +56,7 @@
 			{{ csrf_field() }}
 
 			<div class="form-group {{ $errors->has('first_name') || $errors->has('last_name')  ? ' has-error' : '' }}">
-				<label for="first_name">@lang('personal-office.auth.register.name') <span class="text-danger"> *</span></label>
+				<label for="first_name">@lang('personal-office/auth/register.name') <span class="text-danger"> *</span></label>
 				<div class="row">
 					<div class="col-xs-6">
 						<input type="text" class="form-control" name="first_name" id="first_name"
@@ -78,7 +78,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('username') ? ' has-error' : '' }}">
-				<label for="username">@lang('personal-office.auth.register.username') <span class="text-danger"> *</span></label>
+				<label for="username">@lang('personal-office/auth/register.username') <span class="text-danger"> *</span></label>
 				<input type="text" class="form-control" name="username" id="username" value="{{ old('username') }}"
 					   placeholder="User Name"  autocomplete="off">
 				@if ($errors->has('username'))
@@ -89,7 +89,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-				<label for="email">@lang('personal-office.auth.register.email') <span class="text-danger"> *</span></label>
+				<label for="email">@lang('personal-office/auth/register.email') <span class="text-danger"> *</span></label>
 				<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"
 					   placeholder="E-mail Address"  autocomplete="off">
 				@if ($errors->has('email'))
@@ -100,7 +100,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('mobile_number') ? ' has-error' : '' }}">
-				<label for="mobile_number" class="control-label">@lang('personal-office.auth.register.mobile_number')</label>
+				<label for="mobile_number" class="control-label">@lang('personal-office/auth/register.mobile_number')</label>
 				<input type="hidden" name="mobile_code" id="mobile_code" value="UA">
 				<input type="tel" name="mobile_number" class="form-control" id="mobile_number"
 				       value="{{ old('mobile_number') }}"  autocomplete="off">
@@ -110,7 +110,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('sponsor') ? ' has-error' : '' }}">
-				<label for="sponsor">@lang('personal-office.auth.register.sponsor') <span class="text-danger"> *</span></label>
+				<label for="sponsor">@lang('personal-office/auth/register.sponsor') <span class="text-danger"> *</span></label>
 				<input type="text" class="form-control" id="sponsor" name="sponsor"
 					   @if(old('sponsor')) value="{{ old('sponsor') }}" @else value="{{$sponsor}}"
 					   @endif placeholder="Sponsor Name"  autocomplete="off">
@@ -122,7 +122,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('password') || $errors->has('password_confirmation') ? ' has-error' : '' }}">
-				<label for="password">@lang('personal-office.auth.register.password') <span class="text-danger"> *</span></label>
+				<label for="password">@lang('personal-office/auth/register.password') <span class="text-danger"> *</span></label>
 				<div class="row">
 					<div class="col-xs-6">
 						<input type="password" class="form-control" name="password" id="password"
@@ -142,7 +142,7 @@
 			</div>
 
 			<div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
-				<label for="country" class="control-label">@lang('personal-office.auth.register.country')</label>
+				<label for="country" class="control-label">@lang('personal-office/auth/register.country')</label>
 				<select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
 				        name="country"
 				        id="country">
@@ -159,7 +159,7 @@
 			<div class="panel panel-default hidden">
 				<div class="panel-heading">
 					<i class="fa fa-legal"></i>
-					@lang('personal-office.auth.register.terms')
+					@lang('personal-office/auth/register.terms')
 				</div>
 				<div class="panel-body">
 					<div style="position: relative; overflow: auto; width: auto; height: 150px; text-align: justify">
@@ -173,7 +173,7 @@
 
 			<div class="form-group  {{ $errors->has('terms') ? ' has-error' : '' }}">
 				<div class="checkbox">
-					<label><input type="checkbox" name="terms"> @lang('personal-office.auth.register.agree') <a href="#terms" data-toggle="modal" data-target="#terms">@lang('personal-office.auth.register.terms')</a></label>
+					<label><input type="checkbox" name="terms"> @lang('personal-office/auth/register.agree') <a href="#terms" data-toggle="modal" data-target="#terms">@lang('personal-office.auth.register.terms')</a></label>
 				</div>
 				@if ($errors->has('terms'))
 					<span class="help-block">
@@ -184,7 +184,7 @@
 
 			<div class="form-group  {{ $errors->has('18_years') ? ' has-error' : '' }}">
 				<div class="checkbox">
-					<label><input type="checkbox" name="18_years"> @lang('personal-office.auth.register.18_years')</label>
+					<label><input type="checkbox" name="18_years"> @lang('personal-office/auth/register.18_years')</label>
 				</div>
 				@if ($errors->has('18_years'))
 					<span class="help-block">
@@ -204,7 +204,7 @@
 			<hr>
 			<div class="form-group">
 				<button type="submit" class="btn btn-block btn-primary">
-					<i class="fa fa-save"></i> @lang('personal-office.auth.register.create_member')
+					<i class="fa fa-save"></i> @lang('personal-office/auth/register.create_member')
 				</button>
 			</div>
             @captcha(App::getLocale())
@@ -218,7 +218,7 @@
                    @include('terms_en')
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">@lang('personal-office.auth.register.close')</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">@lang('personal-office/auth/register.close')</button>
                 </div>
             </div>
         </div>

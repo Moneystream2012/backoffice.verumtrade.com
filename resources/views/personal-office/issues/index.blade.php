@@ -11,12 +11,12 @@
 			<div class="col-md-12">
 
 				<div class="margin-md-bottom">
-					<a href="{{route('personal-office.issues.new')}}" class="btn btn-primary t">@lang('personal-office.issues.index.new_issue')</a>
+					<a href="{{route('personal-office.issues.new')}}" class="btn btn-primary t">@lang('personal-office/issues/index.new_issue')</a>
 				</div>
 
 				<div class="panel">
 					<div class="panel-heading">
-						<strong class="panel-title">@lang('personal-office.issues.index.list')</strong>
+						<strong class="panel-title">@lang('personal-office/issues/index.list')</strong>
 					</div>
 					<div class="table-responsive">
 						<table class="table table-hover table-mail">
@@ -43,7 +43,7 @@
 								</tr>
 							@empty
 								<td>
-									<p class="text-center text-muted margin-vertical">@lang('personal-office.issues.index.empty_issues')</p>
+									<p class="text-center text-muted margin-vertical">@lang('personal-office/issues/index.empty_issues')</p>
 								</td>
 							@endforelse
 							</tbody>
