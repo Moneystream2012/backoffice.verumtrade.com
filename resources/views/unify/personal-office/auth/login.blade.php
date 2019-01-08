@@ -44,7 +44,7 @@
                 <div class="pull-left">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> @lang('unify/personal-office/auth/.login.remember_me')
+                            <input type="checkbox" name="remember"> @lang('unify/personal-office/auth/login.remember_me')
                         </label>
                     </div>
                 </div>
