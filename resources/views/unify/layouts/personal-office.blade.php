@@ -394,7 +394,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
                                 <div class="page-icon">
-                                    <i class="{{$v_lang->icon}}"></i>
+                                    <i class="{{isset($v_lang->icon) ? $v_lang->icon : ''}}"></i>
                                 </div>
                                 <div class="page-title">
                                     <h5>{{$v_lang->title}}</h5>
