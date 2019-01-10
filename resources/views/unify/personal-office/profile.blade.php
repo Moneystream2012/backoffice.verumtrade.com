@@ -51,7 +51,7 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">@lang('unify/personal-office/profile.id'): {{$auth->id}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/profile.username'): {{$auth->username}}</li>
-                    <li class="list-group-item">@lang('unify/personal-office/profile.email'): {{  }}$auth->email}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/profile.email'): {{$auth->email}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/profile.sponsor'): {{$auth->sponsor()->value('username') ?? '-'}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/profile.country'): {{$auth->country_name}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/profile.mobile_number'): {{$auth->mobile_number_format}}</li>
