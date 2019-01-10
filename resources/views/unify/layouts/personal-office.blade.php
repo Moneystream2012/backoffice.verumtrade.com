@@ -25,7 +25,6 @@
     </div>
 @endsection
 @section('body')
-{{ logger($v_lang) }}
     <!-- Loading starts -->
     <div class="loading-wrapper">
         <div class="loading">
