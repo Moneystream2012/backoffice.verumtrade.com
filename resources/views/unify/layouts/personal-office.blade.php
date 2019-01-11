@@ -398,7 +398,7 @@
                                 </div>
                                 <div class="page-title">
                                     <h5>{{$v_lang->title}}</h5>
-                                    <h6 class="sub-heading">{{$v_lang->description}}</h6>
+                                    <h6 class="sub-heading">{{ (isset($v_lang) && isset($v_lang->description)) ? $v_lang->description : ''}}</h6>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-2 mt-md-0">
