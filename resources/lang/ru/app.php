@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'subtitle'    => '',
+    'subtitle' => '',
     'description' => '',
-    'keywords'    => '',
+    'keywords' => '',
 
     'languages' => [
         'en' => 'Английский',
         'ru' => 'Русский',
-        'es' => 'Испанский',
+        // 'es' => 'Испанский',
     ],
 ];
