@@ -11,8 +11,8 @@
     @foreach(trans('app.languages') as $lang => $title )
         <li class="{{$lang == Lang::getLocale() ? 'active' : ''}}">
             {{--  <a href="{{lang_toggle_href($lang)}}">{{$title}}</a>  --}}
-            <a href="{{ route(\Request::route()->getName(), ['lang' => $lang]) }}">
-                <img src="{{asset('img/flags/'.Lang::getLocale().'.png')}}" alt="Language" class="lang__flag-pic">
+            <a href="{{ route(\Request::route()->getName(), ['lang' => $lang]) }}" class="py-3">
+                <img src="{{asset('img/flags/'.$lang.'.png')}}" alt="Language" class="lang__flag-pic">
                 {{$title}}
             </a>
         </li>
