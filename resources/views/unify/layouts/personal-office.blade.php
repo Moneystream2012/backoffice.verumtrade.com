@@ -57,6 +57,9 @@
                     </div>
                     <div class="col-6 col-sm-4 col-lg-5">
                         <ul class="header-actions">
+                            <li>
+                                @include('include.languages')
+                            </li>
                             <li class="dropdown">
                                 <a href="#" id="userBalances" class="user-balances" data-toggle="dropdown" aria-haspopup="true">
                                     <i class="icon-account_balance text-secondary"></i>

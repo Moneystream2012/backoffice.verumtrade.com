@@ -111,9 +111,6 @@
                     </ul>
                 </li>
             </ul>
-
-            @include('include.languages')
-
         </nav>
     </header>
 
