@@ -10,6 +10,9 @@
 
 <ul class="languages">
     @foreach(trans('app.languages') as $lang => $title )
-        <li class="{{$lang == Lang::getLocale() ? 'active' : ''}}"><a href="{{lang_toggle_href($lang)}}">{{$title}}</a></li>
+        <li class="{{$lang == Lang::getLocale() ? 'active' : ''}}">
+            {{--  <a href="{{lang_toggle_href($lang)}}">{{$title}}</a>  --}}
+            <a href="{{ route(Request::path(), ['lang' => $lang] }}">{{$title}}</a>
+        </li>
     @endforeach
 </ul>
