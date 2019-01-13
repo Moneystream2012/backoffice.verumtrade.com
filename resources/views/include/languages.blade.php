@@ -19,12 +19,12 @@
 </a>
 
 <div class="dropdown-menu dropdown-menu-right lg" aria-labelledby="userLanguages">
-    <ul class="stats-widget {{-- languages--}}">
+    <ul class="languages">
         @foreach(trans('app.languages') as $lang => $title)
             <li class="{{$lang == Lang::getLocale() ? 'active ' : ''}}my-1">
                 {{--  <a href="{{lang_toggle_href($lang)}}">{{$title}}</a>  --}}
                 <p><a href="{{ route(\Request::route()->getName(), ['lang' => $lang]) }}">
-                    <span class="text-muted">{{$title}} </span>
+                    <span class="text-muted desc">{{$title}} </span>
                     <img src="{{asset('img/flags/'.$lang.'.png')}}" alt="Language" class="lang__flag-pic" style="height: 20px;">
                 </a></p>
             </li>
