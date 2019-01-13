@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-6 col-sm-4 col-lg-5">
                         <ul class="header-actions">
-                            <li>
+                            <li class="dropdown">
                                 @include('include.languages')
                             </li>
                             <li class="dropdown">
