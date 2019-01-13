@@ -58,9 +58,6 @@
                     <div class="col-6 col-sm-4 col-lg-5">
                         <ul class="header-actions">
                             <li class="dropdown">
-                                @include('include.languages')
-                            </li>
-                            <li class="dropdown">
                                 <a href="#" id="userBalances" class="user-balances" data-toggle="dropdown" aria-haspopup="true">
                                     <i class="icon-account_balance text-secondary"></i>
                                     <small class="text-muted text-uppercase desc">{{$l_lang->balance}} </small>
@@ -154,6 +151,9 @@
                                         </form>
                                     </div>
                                 </div>
+                            </li>
+                            <li class="dropdown">
+                                @include('include.languages')
                             </li>
                         </ul>
                     </div>

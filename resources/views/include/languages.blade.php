@@ -8,25 +8,25 @@
 </div>  --}}
 
 <a href="#" id="userLanguages" class="user-balances" data-toggle="dropdown" aria-haspopup="true">
-    @foreach(trans('app.languages') as $lang => $title )
+    @foreach(trans('app.languages') as $lang => $title)
         @if($lang == Lang::getLocale())
-        <i class="icon-account_balance text-secondary"></i>
+        <i class="text-secondary"></i>
+            <small class="text-muted desc">{{$title}} </small>
             <img src="{{asset('img/flags/'.$lang.'.png')}}" alt="Language" class="lang__flag-pic" style="height: 20px;">
-            <small class="text-muted {{--  text-uppercase --}} desc">{{$title}} </small>
         <i class="icon-chevron-small-down"></i>
         @endif
     @endforeach
 </a>
 
 <div class="dropdown-menu dropdown-menu-right lg" aria-labelledby="userLanguages">
-    <ul class="languages">
-        @foreach(trans('app.languages') as $lang => $title )
+    <ul class="stats-widget {{-- languages--}}">
+        @foreach(trans('app.languages') as $lang => $title)
             <li class="{{$lang == Lang::getLocale() ? 'active ' : ''}}my-1">
                 {{--  <a href="{{lang_toggle_href($lang)}}">{{$title}}</a>  --}}
-                <a href="{{ route(\Request::route()->getName(), ['lang' => $lang]) }}">
+                <p><a href="{{ route(\Request::route()->getName(), ['lang' => $lang]) }}">
+                    <small class="text-muted desc">{{$title}} </small>
                     <img src="{{asset('img/flags/'.$lang.'.png')}}" alt="Language" class="lang__flag-pic" style="height: 20px;">
-                    {{$title}}
-                </a>
+                </a></p>
             </li>
         @endforeach
     </ul>
