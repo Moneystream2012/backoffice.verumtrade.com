@@ -966,6 +966,35 @@ hr {
 		}
 	}
 }
+
+.choose_lang {
+	width: 146px;
+	border-left: 1px solid #E1E5F0;
+
+	> i {
+		font-size: 21px;
+		vertical-align: middle;
+		color: #858b9a;
+	}
+
+	> a {
+		padding: 19px 18px;
+		display: block;
+		position: relative;
+	}
+
+	> small {
+		margin-left: 5px;
+		vertical-align: middle;
+		font-size: .85rem;
+		display: inline-block;
+		max-width: 90px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
 @media (max-width: 767px) {
   .header-actions {
     > li {
