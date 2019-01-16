@@ -7,7 +7,7 @@
     </select>
 </div>  --}}
 
-<div class="dropdown choose_lang show">
+<div class="{{-- dropdown --}} choose_lang show">
     <a href="#" id="userLanguages" class="user-balances" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         @foreach(trans('app.languages') as $lang => $title)
             @if($lang == Lang::getLocale())

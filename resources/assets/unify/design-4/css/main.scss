@@ -971,6 +971,10 @@ hr {
 	width: 146px;
 	border-left: 1px solid #E1E5F0;
 
+	> ul > a {
+		padding: 0;
+	}
+
 	> i {
 		font-size: 21px;
 		vertical-align: middle;
