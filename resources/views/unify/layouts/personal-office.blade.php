@@ -152,7 +152,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown choose_lang">
                                 @include('include.languages')
                             </li>
                         </ul>
