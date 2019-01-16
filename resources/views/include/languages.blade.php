@@ -7,7 +7,7 @@
     </select>
 </div>  --}}
 
-<div class="{{-- dropdown --}} choose_lang show">
+<div class="dropdown choose_lang">
     <a href="#" id="userLanguages" class="user-balances" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         @foreach(trans('app.languages') as $lang => $title)
             @if($lang == Lang::getLocale())
@@ -19,7 +19,7 @@
         @endforeach
     </a>
 
-    <div class="dropdown-menu dropdown-menu-right lg show" aria-labelledby="userLanguages" x-placement="bottom-end" style="position: absolute; transform: translate3d(-143px, 66px, 0px); top: 0px; left: 0px; will-change: transform;">
+    <div class="dropdown-menu dropdown-menu-right lg" aria-labelledby="userLanguages" x-placement="bottom-end" style="position: absolute; transform: translate3d(-143px, 66px, 0px); top: 0px; left: 0px; will-change: transform;">
         <ul class="stats-widget languages">
             @foreach(trans('app.languages') as $lang => $title)
                 <li class="{{$lang == Lang::getLocale() ? 'active ' : ''}}my-1">
