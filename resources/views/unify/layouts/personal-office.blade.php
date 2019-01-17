@@ -419,6 +419,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="replenish">
+                    <div class="replenish_title">
+                        Пополнение баланса
+                    </div>
+                    <div class="summ">
+                        Сумма пополнения
+                        <label>
+                            <input type="text">
+                            <span>USD</span>
+                        </label>
+                    </div>
+                    <div class="method">
+                        Метод
+                        <select>
+                            <option value="Visa/Mastercard">Visa/Mastercard</option>
+                            <option value="Visa/Mastercard">Mastercard</option>
+                            <option value="Visa/Mastercard">Visa</option>
+                        </select>
+                    </div>
+                    <button class="btn btn_green">ПОПОЛНИТЬ</button>
+                </div>
                 <!-- END: .main-heading -->
                 <!-- BEGIN .main-content -->
                 <div class="main-content">
