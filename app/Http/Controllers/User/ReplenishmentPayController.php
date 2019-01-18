@@ -115,11 +115,11 @@ class ReplenishmentPayController extends Controller
 	public function replenish_layout(Request $request)
 	{
 		$this->validate($request, [
-			'amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
-			'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
+			'replenishment_amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
+			'replenishment_method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
 		]);
 
-		$method = $request->input('method');
+		$method = $request->input('replenishment_method');
 
 		/*if (in_array($method, ['perfect_money', 'advcash', 'verumcoin']) && $type_balance != 'mining_balance') {
 			flash()->error(trans('unify/personal-office/finance/replenishment.ex_error'));
@@ -128,7 +128,7 @@ class ReplenishmentPayController extends Controller
 		}*/
 		if ($method == 'verumcoin') return $this->ecommerce($request);
 
-		$amount = round($request->input('amount'), 2);
+		$amount = round($request->input('replenishment_amount'), 2);
 		$cost_amount = round($amount * config('mlm.replenishments.usd.coefficient'), 2);
 
 		$order = (object)[
