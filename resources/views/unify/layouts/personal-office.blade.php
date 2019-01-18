@@ -421,7 +421,7 @@
                     </div>
                 </div>
 
-
+                <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment" method="post">
                 <div class="replenish">
                     <div class="replenish_title">
                         Пополнение баланса
@@ -434,7 +434,6 @@
 </div>
 </div--->
                     {{--Form::open(['route'=> 'personal-office/replenishment.post'])--}}
-                    <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment" method="post">
 
                     <div class="summ">
                         @lang('personal-office/replenishment.amount')
@@ -455,15 +454,35 @@
                         </select>
                     </div>
 
-                        <button class="btn btn_green" type="submit">
-                            @lang('personal-office/replenishment.title')
-                        </button>
+                    <button class="btn btn_green" type="submit">
+                        @lang('personal-office/replenishment.title')
+                    </button>
 
-                        {{-- Form::close() --}}
-                    </form>
                 </div>
+                </form>
+            {{-- Form::close() --}}
 
-
+                <!--div class="replenish">
+                    <div class="replenish_title">
+                        Пополнение баланса
+                    </div>
+                    <div class="summ">
+                        Сумма пополнения
+                        <label>
+                            <input type="text">
+                            <span>USD</span>
+                        </label>
+                    </div>
+                    <div class="method">
+                        Метод
+                        <select>
+                            <option value="Visa/Mastercard">Visa/Mastercard</option>
+                            <option value="Visa/Mastercard">Mastercard</option>
+                            <option value="Visa/Mastercard">Visa</option>
+                        </select>
+                    </div>
+                    <button class="btn btn_green">ПОПОЛНИТЬ</button>
+                </div-->
                 <!-- END: .main-heading -->
                 <!-- BEGIN .main-content -->
                 <div class="main-content">
