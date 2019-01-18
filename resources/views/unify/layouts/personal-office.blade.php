@@ -421,7 +421,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                {{--<div class="row">
                     {{Form::open(['route'=> 'personal-office/replenishment.post'])}}
 
                     <!--div class="col-sm-4">
@@ -451,9 +451,7 @@
                                 <option value="bitcoin">@lang('personal-office/replenishment.bitcoin')</option>
                                 <option value="perfect_money">@lang('personal-office/replenishment.perfect_money')</option>
                                 <option value="free_kassa">@lang('personal-office/replenishment.free_kassa')</option>
-                                {{--<option value="yandex-money">Yandex Money (Visa/MasterCard)</option>--}}
-                                {{--<option value="verumcoin">Verumcoin</option>--}}
-                                {{--<option value="advcash">AdvCash</option>--}}
+
                             </select>
                         </div>
                     </div>
@@ -464,6 +462,8 @@
 
                     {{Form::close()}}
                 </div>
+
+                --}}
 
                 <!--div class="replenish">
                     <div class="replenish_title">
