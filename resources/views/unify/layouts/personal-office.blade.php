@@ -421,7 +421,7 @@
                     </div>
                 </div>
 
-                {{--<div class="row">
+                <div class="row">
                     {{Form::open(['route'=> 'personal-office/replenishment.post'])}}
 
                     <!--div class="col-sm-4">
@@ -429,7 +429,7 @@
                             <label for="amount" class="control-label">@ lang('personal-office/replenishment.amount') <span id="amount_currency"></span></label>
                             <input type="text" class="form-control money" placeholder="0.00" name="amount" required autocomplete="off"/>
                         </div>
-                    </div--->
+                    </div--->{{--
 
                     <div class="replenish">
                         <div class="replenish_title">
@@ -454,7 +454,7 @@
 
                             </select>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <button class="btn btn_green" type="submit">
                         @lang('personal-office/replenishment.title')
@@ -463,7 +463,7 @@
                     {{Form::close()}}
                 </div>
 
-                --}}
+
 
                 <!--div class="replenish">
                     <div class="replenish_title">
