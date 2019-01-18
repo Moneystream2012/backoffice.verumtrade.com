@@ -421,6 +421,8 @@
                     </div>
                 </div>
 
+                {{--Form::open(['route'=> 'personal-office/replenishment.post'])--}}
+                {{--
                 <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post" target="_blank">
                 <div class="replenish">
                     <div class="replenish_title">
@@ -433,7 +435,7 @@
     <input type="text" class="form-control money" placeholder="0.00" name="amount" required autocomplete="off"/>
 </div>
 </div--->
-                    {{--Form::open(['route'=> 'personal-office/replenishment.post'])--}}
+
 
                     <div class="summ">
                         @lang('personal-office/replenishment.amount')
@@ -459,7 +461,7 @@
                     </button>
 
                 </div>
-                </form>
+                </form> --}}
             {{-- Form::close() --}}
 
                 <!--div class="replenish">
