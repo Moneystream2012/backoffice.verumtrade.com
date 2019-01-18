@@ -421,7 +421,7 @@
                     </div>
                 </div>
 
-                <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment" method="post">
+                <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post">
                 <div class="replenish">
                     <div class="replenish_title">
                         Пополнение баланса

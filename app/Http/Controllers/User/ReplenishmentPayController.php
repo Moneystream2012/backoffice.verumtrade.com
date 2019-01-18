@@ -107,6 +107,83 @@ class ReplenishmentPayController extends Controller
         return redirect()->back();
     }
 
+	/**
+	 * @param Request $request
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+	 * @throws ValidationException
+	 */
+	public function replenish_layout(Request $request)
+	{
+		$this->validate($request, [
+			'amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
+			'method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
+		]);
+
+		$method = $request->input('method');
+
+		/*if (in_array($method, ['perfect_money', 'advcash', 'verumcoin']) && $type_balance != 'mining_balance') {
+			flash()->error(trans('unify/personal-office/finance/replenishment.ex_error'));
+
+			return redirect()->back();
+		}*/
+		if ($method == 'verumcoin') return $this->ecommerce($request);
+
+		$amount = round($request->input('amount'), 2);
+		$cost_amount = round($amount * config('mlm.replenishments.usd.coefficient'), 2);
+
+		$order = (object)[
+			'replenishment_id' => Replenishment::generateID(),
+			'status' => 'processing',
+			'currency' => 'USD',
+			'token' => str_random(16),
+			'amount' => $amount,
+			'cost_amount' => $cost_amount,
+			'full_amount' => $amount + $cost_amount,
+		];
+
+		if ($method == 'bitcoin') {
+			$order_bitcoin = $this->bitcoin($order);
+		}
+
+		auth()->user()->replenishments()->create([
+			'id' => $order->replenishment_id,
+			'currency' => $order->currency,
+			'amount' => $order->amount,
+			'to' => 'balance',
+			'cost_amount' => $order->cost_amount,
+			'method' => $method,
+			'payment_url' => $order_bitcoin->payment_url ?? '#',
+			'payment_id' => $order_bitcoin->id ?? $order->replenishment_id,
+			'token' => $order->token,
+			'status' => $order->status,
+		]);
+
+		switch ($method) {
+			case 'bitcoin':
+				return redirect($order_bitcoin->payment_url);
+				break;
+			case 'perfect_money':
+				return $this->perfect_money($order);
+				break;
+			case 'walletone':
+				return $this->walletone($order);
+				break;
+			case 'advcash':
+				return $this->advcash($order);
+				break;
+			case 'yandex-money':
+				return $this->yandexMoney($order);
+				break;
+			case 'free-kassa':
+				return $this->freeKassa($order);
+				break;
+			default:
+				flash()->error('Error replenishment.');
+		}
+
+		return redirect()->back();
+	}
+
     /**
      * @param Request $request
      * @param $method

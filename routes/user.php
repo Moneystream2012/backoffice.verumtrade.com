@@ -85,6 +85,7 @@ Route::group([
         Route::get('/', 'User\ReplenishmentPayController@show')->name('index');
         Route::any('/pay/{replenishment}', 'User\ReplenishmentPayController@pay')->name('pay');
         Route::post('/', 'User\ReplenishmentPayController@replenish')->name('post');
+	    Route::post('/layout', 'User\ReplenishmentPayController@replenish_layout')->name('post');
     });
 
     Route::group([
