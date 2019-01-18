@@ -421,8 +421,9 @@
                     </div>
                 </div>
 
-                {{--<div class="row">
-                    {{Form::open(['route'=> 'personal-office/replenishment.post'])}}
+                <div class="row">
+                    <form id="replenishment_in_layout" action="{{ Route::post('personal-office/replenishment') }}">>
+                    {{--Form::open(['route'=> 'personal-office/replenishment.post'])--}}
 
                     <!--div class="col-sm-4">
                         <div class="form-group">
@@ -460,7 +461,8 @@
                         @lang('personal-office/replenishment.title')
                     </button>
 
-                    {{Form::close()}}
+                    {{-- Form::close() --}}
+                    </form>
                 </div>
 
                 --}}
