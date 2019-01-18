@@ -422,7 +422,7 @@
                 </div>
 
                 <div class="row">
-                    <form id="replenishment_in_layout" action="{{ Route::post('personal-office/replenishment') }}">>
+                    <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment" method="post">
                     {{--Form::open(['route'=> 'personal-office/replenishment.post'])--}}
 
                     <!--div class="col-sm-4">
