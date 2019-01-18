@@ -420,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="replenish">
+                <!--div class="replenish">
                     <div class="replenish_title">
                         Пополнение баланса
                     </div>
@@ -440,7 +440,7 @@
                         </select>
                     </div>
                     <button class="btn btn_green">ПОПОЛНИТЬ</button>
-                </div>
+                </div-->
                 <!-- END: .main-heading -->
                 <!-- BEGIN .main-content -->
                 <div class="main-content">
