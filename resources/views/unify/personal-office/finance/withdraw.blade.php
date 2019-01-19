@@ -62,7 +62,7 @@
                                 <option value="mining_balance-BTC">{{$l_lang->balance}} VMC => BTC</option>
                                 <option value="mining_balance-VMC">{{$l_lang->balance}} VMC => VMC</option>
                                 <option value="mining_balance-RUB">{{$l_lang->balance}} VMC => Yandex Money</option>
-                                <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option>
+                                {{-- <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option> --}}
                             </optgroup>
                         </select>
                     </div>

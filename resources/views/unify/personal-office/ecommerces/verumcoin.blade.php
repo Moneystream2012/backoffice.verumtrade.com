@@ -21,7 +21,7 @@
                                 </span>
                                 <input type="text" id="address" value="{{$address}}" class="form-control" readonly>
                             </div>
-                            <p class="alert mt-3 alert-info">{{$v_lang->msg_info}}</p>
+                            <p class="alert mt-3 alert-info">{{ isset($v_lang) && isset($v_lang->msg_info) ? $v_lang->msg_info : '' }}</p>
                             <a href="{{route('personal-office.replenishment.index')}}"
                                class="btn btn-light">{{$l_lang->back}}</a>
                         </div>
