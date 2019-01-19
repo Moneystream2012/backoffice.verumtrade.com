@@ -61,7 +61,7 @@
                     <li class="list-group-item">@lang('unify/personal-office/verification.email'): {{$auth->email}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/verification.sponsor'): {{$auth->sponsor_username}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/verification.country'): {{$auth->country_name}}</li>
-                    <li class="list-group-item">@lang('unify/personal-office/verification.mobile_number'): {{  }}$auth->mobile_number_format}}</li>
+                    <li class="list-group-item">@lang('unify/personal-office/verification.mobile_number'): {{$auth->mobile_number_format}}</li>
                     <li class="list-group-item">@lang('unify/personal-office/verification.status'): <strong class="text-{{$auth->verified ? 'secondary' : 'warning'}}">{{$verification->status_text}}</strong></li>
                     <li class="list-group-item">@lang('unify/personal-office/verification.date'): @format_date($verification->verification_at)</li>
                 </ul>
