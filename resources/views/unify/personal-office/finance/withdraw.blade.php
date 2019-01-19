@@ -107,7 +107,7 @@
                             @forelse($data as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
-                                    <td>{{$item->from_method}} => {{  }}$item->to_method}}</td>
+                                    <td>{{$item->from_method}} => {{$item->to_method}}</td>
                                     <td>@format_usd($item->amount)</td>
                                     <td>@format_usd($item->cost_amount)</td>
                                     <td>
