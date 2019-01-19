@@ -56,12 +56,12 @@
                                 <option value="balance-BTC">{{$l_lang->balance}} USD => BTC</option>
                                 <option value="balance-VMC">{{$l_lang->balance}} USD => VMC</option>
                                 <option value="balance-RUB">{{$l_lang->balance}} USD => Yandex Money</option>
-                                <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option>
+                                {{-- <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option> --}}
                             </optgroup>
                             <optgroup label="{{$l_lang->balance}} VMC">
                                 <option value="mining_balance-BTC">{{$l_lang->balance}} VMC => BTC</option>
                                 <option value="mining_balance-VMC">{{$l_lang->balance}} VMC => VMC</option>
-                                <option value="mining_balance-RUB">{{$l_lang->balance}} VMC => Yandex Money</option>
+                                <option value="mining_balance-RUB">{{  }}$l_lang->balance}} VMC => Yandex Money</option>
                                 <option value="balance-USD">{{$l_lang->balance}} USD => FreeKassa (USD)</option>
                             </optgroup>
                         </select>
@@ -107,7 +107,7 @@
                             @forelse($data as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
-                                    <td>{{$item->from_method}} => {{$item->to_method}}</td>
+                                    <td>{{$item->from_method}} => {{  }}$item->to_method}}</td>
                                     <td>@format_usd($item->amount)</td>
                                     <td>@format_usd($item->cost_amount)</td>
                                     <td>
