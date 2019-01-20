@@ -49,7 +49,9 @@ class ReplenishmentPayController extends Controller
 
             return redirect()->back();
         }*/
-        if ($method == 'verumcoin') return $this->ecommerce($request);
+        if ($method == 'verumcoin') {
+            return $this->ecommerce($request);
+        }
 
         $amount = round($request->input('amount'), 2);
         $cost_amount = round($amount * config('mlm.replenishments.usd.coefficient'), 2);
@@ -97,9 +99,9 @@ class ReplenishmentPayController extends Controller
             case 'yandex-money':
                 return $this->yandexMoney($order);
                 break;
-	        case 'free-kassa':
-		        return $this->freeKassa($order);
-		        break;
+            case 'free-kassa':
+                return $this->freeKassa($order);
+                break;
             default:
                 flash()->error('Error replenishment.');
         }
@@ -107,82 +109,85 @@ class ReplenishmentPayController extends Controller
         return redirect()->back();
     }
 
-	/**
-	 * @param Request $request
-	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
-	 * @throws ValidationException
-	 */
-	public function replenish_layout(Request $request)
-	{
-		$this->validate($request, [
-			'replenishment_amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
-			'replenishment_method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
-		]);
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     * @throws ValidationException
+     */
+    public function replenish_layout(Request $request)
+    {
+        $this->validate($request, [
+            'replenishment_amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
+            'replenishment_method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
+        ]);
 
-		$method = $request->input('replenishment_method');
+        $method = $request->input('replenishment_method');
 
-		/*if (in_array($method, ['perfect_money', 'advcash', 'verumcoin']) && $type_balance != 'mining_balance') {
-			flash()->error(trans('unify/personal-office/finance/replenishment.ex_error'));
+        /*if (in_array($method, ['perfect_money', 'advcash', 'verumcoin']) && $type_balance != 'mining_balance') {
+            flash()->error(trans('unify/personal-office/finance/replenishment.ex_error'));
 
-			return redirect()->back();
-		}*/
-		if ($method == 'verumcoin') return $this->ecommerce($request);
+            return redirect()->back();
+        }*/
+        if ($method == 'verumcoin') {
+            return $this->ecommerce($request);
+        }
 
-		$amount = round($request->input('replenishment_amount'), 2);
-		$cost_amount = round($amount * config('mlm.replenishments.usd.coefficient'), 2);
+        $amount = round($request->input('replenishment_amount'), 2);
+        $cost_amount = round($amount * config('mlm.replenishments.usd.coefficient'), 2);
 
-		$order = (object)[
-			'replenishment_id' => Replenishment::generateID(),
-			'status' => 'processing',
-			'currency' => 'USD',
-			'token' => str_random(16),
-			'amount' => $amount,
-			'cost_amount' => $cost_amount,
-			'full_amount' => $amount + $cost_amount,
-		];
+        $order = (object)[
+            'replenishment_id' => Replenishment::generateID(),
+            'status' => 'processing',
+            'currency' => 'USD',
+            'token' => str_random(16),
+            'amount' => $amount,
+            'cost_amount' => $cost_amount,
+            'full_amount' => $amount + $cost_amount,
+        ];
 
-		if ($method == 'bitcoin') {
-			$order_bitcoin = $this->bitcoin($order);
-		}
+        if ($method == 'bitcoin') {
+            $order_bitcoin = $this->bitcoin($order);
+        }
 
-		auth()->user()->replenishments()->create([
-			'id' => $order->replenishment_id,
-			'currency' => $order->currency,
-			'amount' => $order->amount,
-			'to' => 'balance',
-			'cost_amount' => $order->cost_amount,
-			'method' => $method,
-			'payment_url' => $order_bitcoin->payment_url ?? '#',
-			'payment_id' => $order_bitcoin->id ?? $order->replenishment_id,
-			'token' => $order->token,
-			'status' => $order->status,
-		]);
+        auth()->user()->replenishments()->create([
+            'id' => $order->replenishment_id,
+            'currency' => $order->currency,
+            'amount' => $order->amount,
+            'to' => 'balance',
+            'cost_amount' => $order->cost_amount,
+            'method' => $method,
+            'payment_url' => $order_bitcoin->payment_url ?? '#',
+            'payment_id' => $order_bitcoin->id ?? $order->replenishment_id,
+            'token' => $order->token,
+            'status' => $order->status,
+        ]);
 
-		switch ($method) {
-			case 'bitcoin':
-				return redirect($order_bitcoin->payment_url);
-				break;
-			case 'perfect_money':
-				return $this->perfect_money($order);
-				break;
-			case 'walletone':
-				return $this->walletone($order);
-				break;
-			case 'advcash':
-				return $this->advcash($order);
-				break;
-			case 'yandex-money':
-				return $this->yandexMoney($order);
-				break;
-			case 'free-kassa':
-				return $this->freeKassa($order);
-				break;
-			default:
-				flash()->error('Error replenishment.');
-		}
+        switch ($method) {
+            case 'bitcoin':
+                return redirect($order_bitcoin->payment_url);
+                break;
+            case 'perfect_money':
+                return $this->perfect_money($order);
+                break;
+            case 'walletone':
+                return $this->walletone($order);
+                break;
+            case 'advcash':
+                return $this->advcash($order);
+                break;
+            case 'yandex-money':
+                return $this->yandexMoney($order);
+                break;
+            case 'free-kassa':
+                return $this->freeKassa($order);
+                break;
+            default:
+                flash()->error('Error replenishment.');
+        }
 
-		return redirect()->back();
-	}
+        // return redirect()->back();
+        return redirect()->route('personal-office.dashboard');
+    }
 
     /**
      * @param Request $request
@@ -191,7 +196,7 @@ class ReplenishmentPayController extends Controller
      */
     public function callback(Request $request, $method)
     {
-	    $order_id = 0;
+        $order_id = 0;
 
         if ($method == 'bitcoin') {
             $order_id = $request->input('order_id');
@@ -200,7 +205,7 @@ class ReplenishmentPayController extends Controller
         } elseif ($method == 'yandex-money') {
             $order_id = $request->input('label');
         } elseif ($method == 'freekassa') {
-	        $order_id = $request->input('MERCHANT_ORDER_ID');
+            $order_id = $request->input('MERCHANT_ORDER_ID');
         }
 
         $order_id = (int)$order_id;
@@ -250,23 +255,23 @@ class ReplenishmentPayController extends Controller
                 } else {
                     $status = 'invalid';
                 }
-            }  elseif ($method == 'freekassa') {
-	            $freeKassaServerIP = $_SERVER[ isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
-//	            if (!in_array($freeKassaServerIP, config('freekassa.ip_list'))) {
-//		            die("Hacking attempt from IP: {$freeKassaServerIP}");
-//	            }
+            } elseif ($method == 'freekassa') {
+                $freeKassaServerIP = $_SERVER[isset($_SERVER['HTTP_X_REAL_IP']) ? 'HTTP_X_REAL_IP' : 'REMOTE_ADDR'];
+                //	            if (!in_array($freeKassaServerIP, config('freekassa.ip_list'))) {
+                //		            die("Hacking attempt from IP: {$freeKassaServerIP}");
+                //	            }
 
-	            $merchantId = config('freekassa.merchant_id');
-	            $secret = config('freekassa.secret2');
-	            $freekassaAmount = $request->input('AMOUNT');
-	            $sign = md5($merchantId .':'. $freekassaAmount .':'. $secret .':'. $order_id);
+                $merchantId = config('freekassa.merchant_id');
+                $secret = config('freekassa.secret2');
+                $freekassaAmount = $request->input('AMOUNT');
+                $sign = md5($merchantId . ':' . $freekassaAmount . ':' . $secret . ':' . $order_id);
 
-	            if ($sign == $_POST['SIGN'] && round($freekassaAmount, 2) >= round($amount, 2)) {
-		            $status = 'paid';
-		            $replenishment->pay();
-	            } else {
-		            $status = 'invalid';
-	            }
+                if ($sign == $_POST['SIGN'] && round($freekassaAmount, 2) >= round($amount, 2)) {
+                    $status = 'paid';
+                    $replenishment->pay();
+                } else {
+                    $status = 'invalid';
+                }
             }
 
             if (!is_null($status)) {
@@ -296,19 +301,19 @@ class ReplenishmentPayController extends Controller
         return redirect()->route('personal-office.replenishment.index');
     }
 
-	public function success_freekassa()
-	{
-		flash()->success(trans('unify/personal-office/finance/replenishment.pay_success'))->important();
+    public function success_freekassa()
+    {
+        flash()->success(trans('unify/personal-office/finance/replenishment.pay_success'))->important();
 
-		return redirect()->route('personal-office.replenishment.index');
-	}
+        return redirect()->route('personal-office.replenishment.index');
+    }
 
-	public function fail_freekassa()
-	{
-		flash()->error(trans('unify/personal-office/finance/replenishment.pay_fail'))->important();
+    public function fail_freekassa()
+    {
+        flash()->error(trans('unify/personal-office/finance/replenishment.pay_fail'))->important();
 
-		return redirect()->route('personal-office.replenishment.index');
-	}
+        return redirect()->route('personal-office.replenishment.index');
+    }
 
     public function ecommerce(Request $request)
     {
@@ -375,26 +380,26 @@ class ReplenishmentPayController extends Controller
 
     private function walletone($order)
     {
-        $key = "5d4230324562716d7b42326f317c377b6660714f6b535c4c6c3635";
-        $fields["WMI_MERCHANT_ID"] = "189559722284";
-        $fields["WMI_PAYMENT_AMOUNT"] = $order->full_amount;
-        $fields["WMI_CURRENCY_ID"] = "840";
-        $fields["WMI_PAYMENT_NO"] = $order->replenishment_id;
-        $fields["WMI_DESCRIPTION"] = "BASE64:" . base64_encode("Payment for order #" . $order->replenishment_id);
-        $fields["WMI_EXPIRED_DATE"] = \Carbon\Carbon::now('UTC')->addDays(10)->toIso8601String();
+        $key = '5d4230324562716d7b42326f317c377b6660714f6b535c4c6c3635';
+        $fields['WMI_MERCHANT_ID'] = '189559722284';
+        $fields['WMI_PAYMENT_AMOUNT'] = $order->full_amount;
+        $fields['WMI_CURRENCY_ID'] = '840';
+        $fields['WMI_PAYMENT_NO'] = $order->replenishment_id;
+        $fields['WMI_DESCRIPTION'] = 'BASE64:' . base64_encode('Payment for order #' . $order->replenishment_id);
+        $fields['WMI_EXPIRED_DATE'] = \Carbon\Carbon::now('UTC')->addDays(10)->toIso8601String();
 
         //Если требуется задать только определенные способы оплаты, раскоментируйте данную строку и перечислите требуемые способы оплаты.
         //$fields["WMI_PTENABLED"]      = array("UnistreamRUB", "SberbankRUB", "RussianPostRUB");
 
-        $fields["WMI_SUCCESS_URL"] = route('personal-office.replenishment.success', ['id' => $order->replenishment_id,
+        $fields['WMI_SUCCESS_URL'] = route('personal-office.replenishment.success', ['id' => $order->replenishment_id,
             'token' => $order->token,
         ]);
-        $fields["WMI_FAIL_URL"] = route('personal-office.replenishment.fail', [
+        $fields['WMI_FAIL_URL'] = route('personal-office.replenishment.fail', [
             'id' => $order->replenishment_id,
             'token' => $order->token,
         ]);
-        uksort($fields, "strcasecmp");
-        $fields["WMI_SIGNATURE"] = base64_encode(pack("H*", md5(implode('', $fields) . $key)));
+        uksort($fields, 'strcasecmp');
+        $fields['WMI_SIGNATURE'] = base64_encode(pack('H*', md5(implode('', $fields) . $key)));
 
         $data = [
             'action' => 'https://wl.walletone.com/checkout/checkout/Index',
@@ -406,19 +411,19 @@ class ReplenishmentPayController extends Controller
 
     private function yandexMoney($order)
     {
-        $fields["receiver"] = "410016147146233";
-        $fields["targets"] = "Payment for order #" . $order->replenishment_id . ', amount: ' . formatCurrency($order->currency, $order->amount, true);
-        $fields["formcomment"] = $fields["targets"];
-        $fields["short-dest"] = $fields["targets"];
-        $fields["label"] = $order->replenishment_id;
-        $fields["quickpay-form"] = 'shop';
-        $fields["sum"] = (string)USDtoRUB($order->full_amount);
-        $fields["need-fio"] = 'false';
-        $fields["need-email"] = 'false';
-        $fields["need-phone"] = 'false';
-        $fields["need-address"] = 'false';
-        $fields["paymentType"] = 'AC';
-        $fields["successURL"] = route('personal-office.replenishment.success', [
+        $fields['receiver'] = '410016147146233';
+        $fields['targets'] = 'Payment for order #' . $order->replenishment_id . ', amount: ' . formatCurrency($order->currency, $order->amount, true);
+        $fields['formcomment'] = $fields['targets'];
+        $fields['short-dest'] = $fields['targets'];
+        $fields['label'] = $order->replenishment_id;
+        $fields['quickpay-form'] = 'shop';
+        $fields['sum'] = (string)USDtoRUB($order->full_amount);
+        $fields['need-fio'] = 'false';
+        $fields['need-email'] = 'false';
+        $fields['need-phone'] = 'false';
+        $fields['need-address'] = 'false';
+        $fields['paymentType'] = 'AC';
+        $fields['successURL'] = route('personal-office.replenishment.success', [
             'id' => $order->replenishment_id,
         ]);
 
@@ -457,19 +462,18 @@ class ReplenishmentPayController extends Controller
         ]);
     }
 
-	private function freeKassa($order)
-	{
-		$merchantId = config('freekassa.merchant_id');
-		$secret = config('freekassa.secret');
-		$sign = md5($merchantId . ':'. $order->full_amount . ':'. $secret . ':'. $order->replenishment_id);
+    private function freeKassa($order)
+    {
+        $merchantId = config('freekassa.merchant_id');
+        $secret = config('freekassa.secret');
+        $sign = md5($merchantId . ':' . $order->full_amount . ':' . $secret . ':' . $order->replenishment_id);
 
-		return view('freekassa.form', [
-			'merchant_id' => $merchantId,
-			'order_id' => $order->replenishment_id,
-			'amount' => $order->full_amount,
-			'sign' => $sign,
-			'currency' => $order->currency,
-		]);
-	}
-
+        return view('freekassa.form', [
+            'merchant_id' => $merchantId,
+            'order_id' => $order->replenishment_id,
+            'amount' => $order->full_amount,
+            'sign' => $sign,
+            'currency' => $order->currency,
+        ]);
+    }
 }
