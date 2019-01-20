@@ -185,8 +185,8 @@ class ReplenishmentPayController extends Controller
                 flash()->error('Error replenishment.');
         }
 
-        // return redirect()->back();
-        return redirect()->route('personal-office.dashboard');
+        return redirect()->back();
+        // return redirect()->route('personal-office.dashboard');
     }
 
     /**
