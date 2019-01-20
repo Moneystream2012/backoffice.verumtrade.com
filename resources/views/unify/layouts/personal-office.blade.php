@@ -488,7 +488,7 @@
                 <!-- END: .main-heading -->
                 <!-- BEGIN .main-content -->
                 <div class="main-content">
-                    {{--  @include('unify.personal-office.partials.payment.repleneshiment-form')  --}}
+                    @include('unify.personal-office.partials.payment.repleneshiment-form')
                     @yield('main-content')
                 </div>
                 <!-- END: .main-content -->
