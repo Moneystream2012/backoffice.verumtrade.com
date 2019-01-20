@@ -6,13 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Jobs\User\RankRemuneration;
 use App\Trading;
 use ConsoleTVs\Charts\Facades\Charts;
-use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        logger($request->session()->all());
         $user = auth()->user();
         $deposits = $user->deposits()->where('active', true)->select('invest')->get();
         $tradings = $user->tradings()->where('status', Trading::ACTIVE)->select('invest')->get();
