@@ -167,26 +167,25 @@ class ReplenishmentPayController extends Controller
                 return redirect($order_bitcoin->payment_url);
                 break;
             case 'perfect_money':
-                return $this->perfect_money($order);
+                return redirect($this->perfect_money($order));
                 break;
             case 'walletone':
-                return $this->walletone($order);
+                return redirect($this->walletone($order));
                 break;
             case 'advcash':
-                return $this->advcash($order);
+                return redirect($this->advcash($order));
                 break;
             case 'yandex-money':
-                return $this->yandexMoney($order);
+                return redirect($this->yandexMoney($order));
                 break;
             case 'free-kassa':
-                return $this->freeKassa($order);
+                return redirect($this->freeKassa($order));
                 break;
             default:
                 flash()->error('Error replenishment.');
         }
 
         return redirect()->back();
-        // return redirect()->route('personal-office.dashboard');
     }
 
     /**

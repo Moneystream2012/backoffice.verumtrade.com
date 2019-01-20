@@ -26,4 +26,5 @@ return [
     'status' => 'Status',
     'date' => 'Date',
     'empty' => 'Empty',
+    'balance_replenish' => 'Balance replenishment',
 ];

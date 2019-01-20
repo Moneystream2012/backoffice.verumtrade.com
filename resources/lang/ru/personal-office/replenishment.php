@@ -26,4 +26,5 @@ return [
     'status' => 'Статус',
     'date' => 'Дата',
     'empty' => 'Пусто',
+    'balance_replenish' => 'Пополнение баланса',
 ];

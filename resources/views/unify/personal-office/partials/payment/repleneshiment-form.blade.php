@@ -1,17 +1,9 @@
-<form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post" target="_blank">
+<form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post">
     {{ csrf_field() }}
     <div class="replenish">
         <div class="replenish_title">
-            Пополнение баланса
+            @lang('personal-office/replenishment.balance_replenish')
         </div>
-
-        <!--div class="col-sm-4">
-<div class="form-group">
-<label for="amount" class="control-label">@ lang('personal-office/replenishment.amount') <span id="amount_currency"></span></label>
-<input type="text" class="form-control money" placeholder="0.00" name="amount" required autocomplete="off"/>
-</div>
-</div--->
-
 
         <div class="summ">
             @lang('personal-office/replenishment.amount')
@@ -28,7 +20,6 @@
                 <option value="bitcoin">@lang('personal-office/replenishment.bitcoin')</option>
                 <option value="perfect_money">@lang('personal-office/replenishment.perfect_money')</option>
                 <option value="free_kassa">@lang('personal-office/replenishment.free_kassa')</option>
-
             </select>
         </div>
 
