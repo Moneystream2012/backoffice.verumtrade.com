@@ -116,11 +116,11 @@ class ReplenishmentPayController extends Controller
      */
     public function replenish_layout(Request $request)
     {
-        dd($request->all());
-        // $this->validate($request, [
-        //     'replenishment_amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
-        //     'replenishment_method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
-        // ]);
+        // dd($request->all());
+        $this->validate($request, [
+            'replenishment_amount' => 'required|numeric|min_amount:USD,' . config('mlm.replenishments.usd.min'),
+            'replenishment_method' => 'required|in:bitcoin,verumcoin,advcash,yandex-money,free-kassa',
+        ]);
 
         $method = $request->input('replenishment_method');
 
