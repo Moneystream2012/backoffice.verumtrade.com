@@ -178,7 +178,7 @@ class ReplenishmentPayController extends Controller
             case 'yandex-money':
                 return $this->yandexMoney($order);
                 break;
-            case 'free-kassa':
+            case 'free_kassa':
                 return $this->freeKassa($order);
                 break;
             default:
