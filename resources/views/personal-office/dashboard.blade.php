@@ -28,9 +28,6 @@
     <div class="container-fluid-md">
         <div class="row">
             <div class="col-sm-6 col-lg-4">
-                @include('unify.personal-office.partials.payment.repleneshiment-form')
-            </div>
-            <div class="col-sm-6 col-lg-4">
                 <div class="panel panel-metric panel-metric-sm">
                     <div class="panel-body panel-body-default">
                         <div class="metric-content metric-icon">

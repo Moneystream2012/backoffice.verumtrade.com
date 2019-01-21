@@ -27,6 +27,9 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="row gutters">
                 <div class="col">
+                    @include('unify.personal-office.partials.payment.repleneshiment-form')
+                </div>
+                <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <div class="stats-widget">
