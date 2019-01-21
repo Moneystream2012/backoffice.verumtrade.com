@@ -1,6 +1,6 @@
-<form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post">
-    {{ csrf_field() }}
-    <div class="replenish">
+<div class="replenish">
+    <form id="replenishment_in_layout" action="https://backoffice.verumtrade.com/personal-office/replenishment/layout" method="post">
+        {{ csrf_field() }}
         <div class="replenish_title">
             @lang('personal-office/replenishment.balance_replenish')
         </div>
@@ -26,6 +26,5 @@
         <button class="btn btn_green" type="submit">
             @lang('personal-office/replenishment.title')
         </button>
-
-    </div>
-</form> 
+    </form>
+</div>

@@ -23,9 +23,8 @@
     {!! $chart->script() !!}
 @endpush
 @section('main-content')
-    <div class="row gutters">
-        @include('unify.personal-office.partials.payment.repleneshiment-form')
-    </div>
+    @include('unify.personal-office.partials.payment.repleneshiment-form')
+
     <div class="row gutters ">
         <div class="col-12 col-md-6 col-lg-4">
             <div class="row gutters">
