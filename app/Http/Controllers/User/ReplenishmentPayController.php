@@ -149,6 +149,8 @@ class ReplenishmentPayController extends Controller
             $order_bitcoin = $this->bitcoin($order);
         }
 
+        logger($method);
+        logger($order);
         auth()->user()->replenishments()->create([
             'id' => $order->replenishment_id,
             'currency' => $order->currency,
