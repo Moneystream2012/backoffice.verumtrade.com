@@ -40,7 +40,102 @@
         <!-- BEGIN .app-heading -->
         <header class="app-header">
             <div class="container-fluid">
-                <div class="row gutters">
+                <div class="row_header">
+                    <div class="left">
+                        <div class="nav_burger">
+                            <a class="mini-nav-btn float-left" href="#" id="app-side-mini-toggler">
+                                <i class="icon-sort"></i>
+                            </a>
+                            <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler float-left" aria-expanded="true">
+                                <i class="icon-chevron-thin-left"></i>
+                            </a>
+                        </div>
+
+                        <a href="{{route('personal-office.dashboard')}}" class="logo">
+                            <img src="{{asset_theme('img/logo.svg')}}" class="img-fluid" alt="{{config('app.name')}}"/>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="balance_now">
+                            <h5>
+                                {{formatUSD($auth->balance)}}
+                                <span class="text-primary">USD</span>
+                            </h5>
+                            <p>{{$l_lang->balance}} USD</p>
+                        </div>
+                        <div class="balance_now">
+                            <h5>
+                                {{formatVMC($auth->mining_balance)}}
+                                <span class="text-primary">VMC</span>
+                                <span class="text-muted" style="opacity: .5;"> / </span>
+                                {{formatUSD(VMCtoUSD($auth->mining_balance))}}
+                                <span class="text-primary">USD</span>
+                            </h5>
+                            <p>{{$l_lang->balance}} VMC</p>
+                        </div>
+                        @if($auth->cold_balance > 0)
+                        <div class="balance_now">
+                            <h5>
+                                {{formatUSD($auth->cold_balance)}}
+                                <small class="text-primary">USD</small>
+                            </h5>
+                            <p>Cold {{$l_lang->balance}}</p>
+                        </div>
+                        @endif
+                        <div class="user_header dropdown">
+                            <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+                                <img class="avatar" src="{{$auth->avatar_url}}" alt="{{$auth->full_name}}">
+                                <span class="user-name">{{$auth->full_name}}</span>
+                                <i class="icon-chevron-small-down"></i>
+                            </a>
+                            <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="userSettings">
+                                <ul class="user-settings-list">
+                                    <li>
+                                        <a href="{{route('personal-office.profile')}}">
+                                            <div class="icon">
+                                                <i class="icon-account_circle"></i>
+                                            </div>
+                                            <p>@lang('unify/personal-office/profile.title')</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('personal-office.history')}}">
+                                            <div class="icon yellow">
+                                                <i class="@lang('unify/personal-office/history.icon')"></i>
+                                            </div>
+                                            <p>@lang('unify/personal-office/history.title')</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- <div class="mob_show">
+                                    <a href="https://backoffice.verumtrade.com/personal-office?lang=en">
+                                            <img src="https://backoffice.verumtrade.com/img/flags/en.png" alt="Language" class="lang__flag-pic" style="height: 20px;">
+                                    </a>
+                                    <a href="https://backoffice.verumtrade.com/personal-office?lang=ru" class="active">
+                                        <img src="https://backoffice.verumtrade.com/img/flags/ru.png" alt="Language" class="lang__flag-pic" style="height: 20px;">
+                                    </a>
+                                </div> -->
+                                <div class="logout-btn">
+                                    <a href="{{ route('personal-office.logout') }}" class="btn btn-primary"
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        {{$l_lang->logout}}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('personal-office.logout') }}"
+                                          method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown choose_lang">
+                            @include('include.languages')
+                        </div>
+                    </div>
+                </div>
+
+                {{-- OLD VERSION
+                <!-- div class="row gutters">
                     <div class="col-2 col-sm-4 col-lg-5">
                         <a class="mini-nav-btn float-left" href="#" id="app-side-mini-toggler">
                             <i class="icon-sort"></i>
@@ -101,7 +196,7 @@
                                                 <small class="text-primary">USD</small>
                                             </h5>
                                             <p>{{$l_lang->balance}} BTC</p>
-                                        </li>--}}
+                                        </li>-- }}
                                     </ul>
                                 </div>
                             </li>
@@ -112,7 +207,7 @@
                                     <span class="user-name">{{$auth->full_name}}</span>
                                     <i class="icon-chevron-small-down"></i>
                                 </a>
-                                <div class="dropdown-menu {{--lg--}} dropdown-menu-right" aria-labelledby="userSettings">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
                                     <ul class="user-settings-list">
                                         <li>
                                             <a href="{{route('personal-office.profile')}}">
@@ -129,7 +224,7 @@
                                                 </div>
                                                 <p>@lang('unify/personal-office/settings.title')</p>
                                             </a>
-                                        </li>--}}
+                                        </li> -- }}
                                         <li>
                                             <a href="{{route('personal-office.history')}}">
                                                 <div class="icon yellow">
@@ -142,7 +237,7 @@
                                     <div class="logout-btn">
                                         <a href="{{ route('personal-office.logout') }}"
                                            class="btn btn-primary"
-                                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                           onclick=" event.preventDefault();document.getElementById('logout-form').submit();">
                                             {{$l_lang->logout}}
                                         </a>
                                         <form id="logout-form" action="{{ route('personal-office.logout') }}"
@@ -158,8 +253,11 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div-->
             </div>
+
+            OLD VERSION END --}}
+
         </header>
         <!-- END: .app-heading -->
         <!-- BEGIN .app-container -->
