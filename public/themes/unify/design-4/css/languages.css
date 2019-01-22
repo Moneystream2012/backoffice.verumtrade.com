@@ -1,3 +1,13 @@
+.row_header .right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+    width: 786px;
+}
+
 .choose_lang{
     width: 160px;
     border-left: 1px solid #E1E5F0;
