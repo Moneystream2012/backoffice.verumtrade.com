@@ -55,7 +55,7 @@
                             <img src="{{asset_theme('img/logo.svg')}}" class="img-fluid" alt="{{config('app.name')}}"/>
                         </a>
                     </div>
-                    <div class="right">
+                    <div class="right-fixed">
                         <div class="balance_now">
                             <h5>
                                 {{formatUSD($auth->balance)}}
