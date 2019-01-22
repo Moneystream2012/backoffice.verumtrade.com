@@ -44,7 +44,7 @@
                                 <textarea class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
                                           rows="4"
                                           name="body"
-                                          placeholder="@lang('unify/personal-office/issues/show.placeholder')"
+                                          placeholder={{@lang('unify/personal-office/issues/show.placeholder')}}
                                           style="resize:vertical;"
                                     {{ $issue->is_baned_send ? 'disabled' : ''}}
                                 ></textarea>
