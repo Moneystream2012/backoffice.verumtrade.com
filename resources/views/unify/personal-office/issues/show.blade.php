@@ -28,7 +28,7 @@
                                     <img
                                         src="{{$item->is_support ?  asset('/img/avatars/support.png') : $auth->avatar_url }}"
                                         alt="{{$item->full_name}}">
-                                    <div class="chats-name">{{ $item->is_support ? 'Support' : '@lang(\'unify/personal-office/issues/show.You\')'}}</div>
+                                    <div class="chats-name">{{ $item->is_support ? 'Support' : @lang('unify/personal-office/issues/show.You')}}</div>
                                 </div>
                                 <div class="chats-text">{!! $item->body !!}</div>
                                 <div class="chats-hour">{{$item->created_at->diffForHumans()}}</div>
