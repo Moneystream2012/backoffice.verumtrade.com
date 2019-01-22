@@ -10,4 +10,5 @@ return [
     'remember_me' => 'Запомнить',
     'forgot_password' => 'Забыли пароль?',
     'create_account' => 'Создать аккаунт',
+    'username_or_id' => 'Ваше имя пользователя или id пользователя',
 ];
