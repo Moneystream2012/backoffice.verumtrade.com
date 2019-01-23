@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <label for="type_balance" class="control-label">@lang('personal-office/balance/transfer.title')</label>
                             <select name="type_balance" id="type_balance" class="form-control form-select"
-                                    data-placeholder="@lang('personal-office/balance/transfer.type_balance')"
+                                    data-placeholder="@lang('type_balance')"
                                     required>
                                 <option value=""></option>
                                 <option value="balance">@lang('personal-office/balance/transfer.balance') USD</option>
