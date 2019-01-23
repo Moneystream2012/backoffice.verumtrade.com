@@ -13,4 +13,6 @@ return [
     'password_confirmation' => 'Подтверждение пароля',
     'submit' => 'Отправить',
     'network' => 'Моя сеть',
+    'user_name' => 'Имя пользователя',
+    'choose_country' => 'Выберите страну...',
 ];

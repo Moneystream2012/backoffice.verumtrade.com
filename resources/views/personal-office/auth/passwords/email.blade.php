@@ -19,7 +19,7 @@
             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                 <label for="email">@lang('personal-office/auth/passwords/email.email') <span class="text-danger"> *</span></label>
                 <input type="email" autofocus="autofocus" class="form-control" autocomplete="off" name="email"
-                       id="email" placeholder="E-mail Address" value="{{ old('email') }}">
+                       id="email" placeholder=@lang('personal-office/auth/passwords/email.email_address') value="{{ old('email') }}">
                 @if ($errors->has('email'))
                     <span class="help-block">
                         <strong>{{ $errors->first('email') }}</strong>

@@ -13,4 +13,5 @@ return [
     'commission' => 'Комиссия',
     'date' => 'Дата',
     'empty' => 'Пустой',
+    'type_balance' => 'Введите баланс...',
 ];
