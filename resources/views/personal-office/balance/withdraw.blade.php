@@ -62,7 +62,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="wallet_address" class="control-label">@lang('personal-office/balance/withdraw.wallet_address')</label>
-                            <input type="text" class="form-control" placeholder=@lang('personal-office/balance/withdraw.wallet_address') name="wallet_address"
+                            <input type="text" class="form-control" placeholder="@lang('personal-office/balance/withdraw.wallet_address')" name="wallet_address"
                                    autocomplete="off" required/>
                         </div>
                     </div>
