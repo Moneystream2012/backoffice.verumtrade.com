@@ -13,4 +13,6 @@ return [
     'password_confirmation' => 'Password Confirmation',
     'submit' => 'Submit',
     'network' => 'My Network',
+    'user_name' => 'User Name',
+    'choose_country' => 'Choose a Country...',
 ];

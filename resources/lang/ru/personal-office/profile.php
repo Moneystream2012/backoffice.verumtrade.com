@@ -35,4 +35,6 @@ return [
     'allowed_file' => 'Допустимые разширения файлов: jpeg, jpg, png. Максимальный размер 2 MB',
     'password' => 'Ваш пароль',
     'update' => 'Обновить',
+    'choose_country' => 'Выберите страну...',
+    'pass_word' => 'Пароль',
 ];

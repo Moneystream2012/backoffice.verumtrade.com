@@ -50,7 +50,7 @@
 							<div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
 								<label for="inputFirstName" class="control-label">@lang('personal-office/sponsored/new_member.first_name')</label>
 								<input type="text" name="first_name" class="form-control" id="inputFirstName"
-								       placeholder="First Name"
+								       placeholder=@lang('personal-office/sponsored/new_member.first_name')
 								       value="{{ old('first_name') }}" autocomplete="off">
 								@if ($errors->has('first_name'))
 									<span class="help-block">{{ $errors->first('first_name') }}</span>
@@ -60,7 +60,7 @@
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('last_name') ? ' has-error' : '' }}">
 								<label for="inputLastName" class="control-label">@lang('personal-office/sponsored/new_member.last_name')</label>
-								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder="Last Name"
+								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder=@lang('personal-office/sponsored/new_member.last_name')
 								       value="{{ old('last_name') }}" autocomplete="off">
 								@if ($errors->has('last_name'))
 									<span class="help-block">{{ $errors->first('last_name') }}</span>
@@ -73,7 +73,7 @@
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('username') ? ' has-error' : '' }}">
 								<label for="username" class="control-label">@lang('personal-office/sponsored/new_member.username')</label>
-								<input type="text" name="username" class="form-control"  autocomplete="off" id="username" placeholder="User Name"
+								<input type="text" name="username" class="form-control"  autocomplete="off" id="username" placeholder=@lang('personal-office/sponsored/new_member.user_name')
 								       value="{{ old('username') }}">
 								@if ($errors->has('username'))
 									<span class="help-block">{{ $errors->first('username') }}</span>
@@ -84,7 +84,7 @@
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
 								<label for="email" class="control-label">@lang('personal-office/sponsored/new_member.email')</label>
-								<input type="email" name="email" class="form-control" id="email"  autocomplete="off" placeholder="Email"
+								<input type="email" name="email" class="form-control" id="email"  autocomplete="off" placeholder=@lang('personal-office/sponsored/new_member.email')
 								       value="{{ old('email') }}">
 								@if ($errors->has('email'))
 									<span class="help-block">{{ $errors->first('email') }}</span>
@@ -108,7 +108,7 @@
 						<div class="col-sm-6">
 							<div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
 								<label for="country" class="control-label">@lang('personal-office/sponsored/new_member.country')</label>
-								<select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
+								<select class="form-control form-chosen form-select2" data-placeholder=@lang('personal-office/sponsored/new_member.choose_country')
 								        name="country"
 								        id="country">
 									@foreach ($countries as $key => $val)
@@ -128,7 +128,7 @@
 							<div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
 								<label for="password" class="control-label">@lang('personal-office/sponsored/new_member.password')</label>
 								<input type="password" class="form-control" name="password"  autocomplete="off" id="password"
-								       placeholder="Password">
+								       placeholder=@lang('personal-office/sponsored/new_member.password')>
 								@if ($errors->has('password'))
 									<span class="help-block">{{ $errors->first('password') }}</span>
 								@endif
@@ -141,7 +141,7 @@
 								<input type="password" class="form-control" name="password_confirmation"
 								       id="password_confirmation"
                                        autocomplete="off"
-								       placeholder="Password Confirmation">
+								       placeholder=@lang('personal-office/sponsored/new_member.password_confirmation')>
 								@if ($errors->has('password_confirmation'))
 									<span class="help-block">{{ $errors->first('password_confirmation') }}</span>
 								@endif

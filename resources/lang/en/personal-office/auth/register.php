@@ -17,4 +17,11 @@ return [
     '18_years' => 'I am 18 years of age or older',
     'create_member' => 'Create member',
     'close' => 'Close',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'user_name' => 'User Name',
+    'email_address' => 'E-mail Address',
+    'sponsor_name' => 'Sponsor Name',
+    'password_confirmation' => 'Confirm Password',
+    'choose_country' => 'Choose a Country...',
 ];

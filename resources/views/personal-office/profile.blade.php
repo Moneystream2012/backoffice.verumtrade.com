@@ -152,14 +152,14 @@
 							<div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
 								<label for="inputFirstName" class="control-label">@lang('personal-office/profile.first_name')</label>
 								<input type="text" name="first_name" class="form-control" id="inputFirstName"
-								       placeholder="First Name" value="{{old('first_name') ?? $auth->first_name}}"  autocomplete="off">
+								       placeholder=@lang('personal-office/profile.first_name') value="{{old('first_name') ?? $auth->first_name}}"  autocomplete="off">
 								@if ($errors->has('first_name'))
 									<span class="help-block">{{ $errors->first('first_name') }}</span>
 								@endif
 							</div>
 							<div class="form-group {{ $errors->has('last_name') ? ' has-error' : '' }}">
 								<label for="inputLastName" class="control-label">@lang('personal-office/profile.last_name')</label>
-								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder="Last Name"
+								<input type="text" name="last_name" class="form-control" id="inputLastName" placeholder=@lang('personal-office/profile.last_name')
 								       value="{{old('last_name') ?? $auth->last_name}}"  autocomplete="off">
 								@if ($errors->has('last_name'))
 									<span class="help-block">{{ $errors->first('last_name') }}</span>
@@ -168,7 +168,7 @@
 
 							<div class="form-group hidden {{ $errors->has('email') ? ' has-error' : '' }}">
 								<label for="email" class="control-label">@lang('personal-office/profile.email')</label>
-								<input type="email" name="email" class="form-control" id="email" placeholder="Email"
+								<input type="email" name="email" class="form-control" id="email" placeholder=@lang('personal-office/profile.email')
 								       value="{{old('email') ?? $auth->email}}"  autocomplete="off">
 								@if ($errors->has('email'))
 									<span class="help-block">{{ $errors->first('email') }}</span>
@@ -187,7 +187,7 @@
 
 							<div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
 								<label for="country" class="control-label">@lang('personal-office/profile.country')</label>
-								<select class="form-control form-chosen form-select2" data-placeholder="Choose a Country..."
+								<select class="form-control form-chosen form-select2" data-placeholder=@lang('personal-office/profile.choose_country')
 								        name="country">
 									@foreach ($countries as $key => $val)
 										<option value="{{ $key }}" {{ $key == $auth->country ? 'selected' : ''}}>{{ $val }}</option>
@@ -209,7 +209,7 @@
 
 							<div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
 								<label for="inputPassword" class="control-label">@lang('personal-office/profile.password')</label>
-								<input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password"  autocomplete="off" required>
+								<input type="password" name="password" class="form-control" id="inputPassword" placeholder=@lang('personal-office/profile.pass_word')  autocomplete="off" required>
 								@if ($errors->has('password'))
 									<span class="help-block">{{ $errors->first('password') }}</span>
 								@endif

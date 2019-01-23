@@ -2,7 +2,7 @@
 
 return [
     'title' => 'My Account',
-    
+
     'msg' => [
         'update' => 'Data updated successfully.',
         'social_account' => [
@@ -33,4 +33,6 @@ return [
     'allowed_file' => 'Allowed file type extensions are: jpeg, jpg, png. Max size 2 MB',
     'password' => 'Your password',
     'update' => 'Update',
+    'choose_country' => 'Choose a Country...',
+    'pass_word' => 'Password',
 ];
