@@ -41,7 +41,7 @@
         <header class="app-header">
             <div class="container-fluid">
                 <div class="row_header">
-                    <div class="left">
+                    <div class="left-fixed">
                         <div class="nav_burger">
                             <a class="mini-nav-btn float-left" href="#" id="app-side-mini-toggler">
                                 <i class="icon-sort"></i>
