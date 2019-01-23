@@ -1,3 +1,12 @@
+.row_header .left-fixed {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 255px;
+}
+
 .row_header .right-fixed {
     display: -webkit-flex;
     display: -moz-flex;

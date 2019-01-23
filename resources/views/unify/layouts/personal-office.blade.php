@@ -41,7 +41,7 @@
         <header class="app-header">
             <div class="container-fluid">
                 <div class="row_header">
-                    <div class="left">
+                    {{--<div class="left-fixed">
                         <div class="nav_burger">
                             <a class="mini-nav-btn float-left" href="#" id="app-side-mini-toggler">
                                 <i class="icon-sort"></i>
@@ -133,8 +133,7 @@
                         </div>
                     </div>
                 </div>
-
-{{--
+--}}
                 <div class="row gutters">
                     <div class="col-2 col-sm-4 col-lg-5">
                         <a class="mini-nav-btn float-left" href="#" id="app-side-mini-toggler">
@@ -196,7 +195,7 @@
                                                 <small class="text-primary">USD</small>
                                             </h5>
                                             <p>{{$l_lang->balance}} BTC</p>
-                                        </li>-- }}
+                                        </li>--}}
                                     </ul>
                                 </div>
                             </li>
@@ -224,7 +223,7 @@
                                                 </div>
                                                 <p>@lang('unify/personal-office/settings.title')</p>
                                             </a>
-                                        </li> -- }}
+                                        </li> --}}
                                         <li>
                                             <a href="{{route('personal-office.history')}}">
                                                 <div class="icon yellow">
@@ -254,7 +253,6 @@
                         </ul>
                     </div>
                 </div>
-                --}}
             </div>
         </header>
         <!-- END: .app-heading -->
