@@ -28,5 +28,7 @@ return [
 
     'alert' => [
         'info' => 'The interest rate may vary from 15% to 25%'
-    ]
+    ],
+
+    'invest_amount' => 'Invest Amount',
 ];

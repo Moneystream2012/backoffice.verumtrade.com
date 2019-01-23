@@ -17,4 +17,11 @@ return [
     '18_years' => 'Мне 18 лет и больше',
     'create_member' => 'Создать учасника',
     'close' => 'Закрыть',
+    'first_name' => 'Имя',
+    'last_name' => 'Фамилия',
+    'user_name' => 'Имя пользователя',
+    'email_address' => 'E-mail адрес',
+    'sponsor_name' => 'Имя спонсора',
+    'password_confirmation' => 'Подтвердите пароль',
+    'choose_country' => 'Выберите страну...',
 ];

@@ -7,11 +7,11 @@
                     {{csrf_field()}}
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="inputTitle" class="control-label">@lang('unify/personal-office/issues/new.title')</label>
+                            <label for="inputTitle" class="control-label">@lang('unify/personal-office/issues/new.title_')</label>
                             <input type="text" name="title"
                                    class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
                                    id="inputTitle"
-                                   placeholder="Title"
+                                   placeholder="@lang('title_')"
                                    autocomplete="off">
                             @if ($errors->has('title'))
                                 <span class="form-text text-danger">{{ $errors->first('title') }}</span>
@@ -22,7 +22,7 @@
                             <textarea name="body"
                                       class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
                                       id="inputBody"
-                                      placeholder="Text"
+                                      placeholder="@lang('text')"
                                       rows="4"
                                       autocomplete="off"></textarea>
                             @if ($errors->has('body'))

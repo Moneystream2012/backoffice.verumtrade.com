@@ -10,4 +10,5 @@ return [
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot your password?',
     'create_account' => 'Create account',
+    'username_or_id' => 'Your username or member id',
 ];

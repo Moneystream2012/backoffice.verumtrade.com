@@ -6,4 +6,5 @@ return [
     'icon' => 'icon-chat',
     'back' => 'Back',
     'submit' => 'Submit',
+    'click' => 'Click here to reply...',
 ];

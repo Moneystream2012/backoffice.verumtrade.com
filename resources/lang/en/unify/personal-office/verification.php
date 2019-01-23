@@ -24,4 +24,6 @@ return [
     'allowed_file' => 'Allowed file type extensions are: jpeg, jpg, png. Max size 5 MB',
     'password' => 'Your password',
     'passport' => 'Verification Photo Doc (passport)',
+    'choose_country' => 'Choose a Country...',
+    'pass_word' => 'Password',
 ];

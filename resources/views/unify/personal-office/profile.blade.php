@@ -131,7 +131,7 @@
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
-                                   placeholder="First Name" value="{{old('first_name') ?? $auth->first_name}}"
+                                   placeholder="@lang('first_name')" value="{{old('first_name') ?? $auth->first_name}}"
                                    autocomplete="off">
                             @if ($errors->has('first_name'))
                                 <span class="form-text text-danger">{{ $errors->first('first_name') }}</span>
@@ -142,7 +142,7 @@
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
-                                   placeholder="Last Name"
+                                   placeholder="@lang('last_name')"
                                    value="{{old('last_name') ?? $auth->last_name}}" autocomplete="off">
                             @if ($errors->has('last_name'))
                                 <span class="form-text text-danger">{{ $errors->first('last_name') }}</span>
@@ -173,7 +173,7 @@
                         <div class="form-group">
                             <label for="country" class="control-label">@lang('unify/personal-office/profile.country')</label>
                             <select
-                                class="form-control form-chosen form-select2 {{ $errors->has('country') ? ' is-invalid' : '' }}" data-placeholder="Choose a Country..."
+                                class="form-control form-chosen form-select2 {{ $errors->has('country') ? ' is-invalid' : '' }}" data-placeholder="@lang('choose_country')"
                                 name="country">
                                 @foreach ($countries as $key => $val)
                                     <option
@@ -199,7 +199,7 @@
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"
-                                   placeholder="Password" autocomplete="off" required>
+                                   placeholder="@lang('pass_word')" autocomplete="off" required>
                             @if ($errors->has('password'))
                                 <span class="form-text text-danger">{{ $errors->first('password') }}</span>
                             @endif

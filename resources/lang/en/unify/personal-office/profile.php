@@ -32,4 +32,6 @@ return [
     'allowed_file' => 'Allowed file type extensions are: jpeg, jpg, png. Max size 2 MB',
     'password' => 'Your password',
     'save' => 'Save',
+    'choose_country' => 'Choose a Country...',
+    'pass_word' => 'Password',
 ];

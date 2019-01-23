@@ -5,4 +5,5 @@ return [
     'sign_in' => 'Sign in',
     'email' => 'E-mail',
     'reset_password' => 'Send Password Reset Link',
+    'email_address' => 'E-mail Address',
 ];
