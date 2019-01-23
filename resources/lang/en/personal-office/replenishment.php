@@ -18,7 +18,7 @@ return [
     'select_option' => 'Select an Option',
     'bitcoin' => 'Bitcoin (altcoins)',
     'perfect_money' => 'Perfect Money',
-    'free_kassa' => 'FreeKassa',
+    'free_kassa' => 'FreeKassa (Visa/MasterCard)',
     'type_balance' => 'Type balance',
     'balance' => 'Balance',
     'commission' => 'Commission',

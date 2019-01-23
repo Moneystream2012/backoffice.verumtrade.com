@@ -18,7 +18,7 @@
             <select name="replenishment_method" id="replenishment_method" required>
                 <option value="">@lang('personal-office/replenishment.select_option')</option>
                 <option value="bitcoin">@lang('personal-office/replenishment.bitcoin')</option>
-                <option value="perfect_money">@lang('personal-office/replenishment.perfect_money')</option>
+                <!-- option value="perfect_money">@ lang('personal-office/replenishment.perfect_money')</option-->
                 <option value="free_kassa">@lang('personal-office/replenishment.free_kassa')</option>
             </select>
         </div>
