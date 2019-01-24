@@ -22,7 +22,7 @@
             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                 <label for="email">@lang('personal-office/auth/passwords/reset.email') <span class="text-danger"> *</span></label>
                 <input type="email" class="form-control" name="email" id="email" autocomplete="off"
-                       placeholder="@lang('email_address')">
+                       placeholder="@lang('personal-office/auth/passwords/reset.email_address')">
                 @if ($errors->has('email'))
                     <span class="help-block">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -36,11 +36,11 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <input type="password" class="form-control" name="password" id="password"
-                               placeholder="@lang('password')" autocomplete="off">
+                               placeholder="@lang('personal-office/auth/passwords/reset.password')" autocomplete="off">
                     </div>
                     <div class="col-xs-6">
                         <input type="password" class="form-control" name="password_confirmation"
-                               placeholder="@lang('password_confirmation')" autocomplete="off">
+                               placeholder="@lang('personal-office/auth/passwords/reset.password_confirmation')" autocomplete="off">
                     </div>
                 </div>
                 @if ($errors->has('password') || $errors->has('password_confirmation'))

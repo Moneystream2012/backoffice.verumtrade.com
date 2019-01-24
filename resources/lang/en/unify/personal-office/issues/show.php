@@ -7,4 +7,6 @@ return [
     'back' => 'Back',
     'submit' => 'Submit',
     'click' => 'Click here to reply...',
+    'support' => 'Support',
+    'you' => 'You',
 ];

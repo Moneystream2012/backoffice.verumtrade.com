@@ -62,11 +62,11 @@
 						<input type="text" class="form-control" name="first_name" id="first_name"
 							   value="{{ old('first_name') }}"
                                autocomplete="off"
-							   placeholder="@lang('first_name')">
+							   placeholder="@lang('personal-office/auth/register.first_name')">
 					</div>
 					<div class="col-xs-6">
 						<input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}"
-							   placeholder="@lang('last_name')"  autocomplete="off">
+							   placeholder="@lang('personal-office/auth/register.last_name')"  autocomplete="off">
 					</div>
 				</div>
 				@if ($errors->has('first_name') || $errors->has('last_name'))
@@ -80,7 +80,7 @@
 			<div class="form-group {{ $errors->has('username') ? ' has-error' : '' }}">
 				<label for="username">@lang('personal-office/auth/register.username') <span class="text-danger"> *</span></label>
 				<input type="text" class="form-control" name="username" id="username" value="{{ old('username') }}"
-					   placeholder="@lang('user_name')"  autocomplete="off">
+					   placeholder="@lang('personal-office/auth/register.user_name')"  autocomplete="off">
 				@if ($errors->has('username'))
 					<span class="help-block">
                                 <strong>{{ $errors->first('username') }}</strong>
@@ -91,7 +91,7 @@
 			<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
 				<label for="email">@lang('personal-office/auth/register.email') <span class="text-danger"> *</span></label>
 				<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}"
-					   placeholder="@lang('email_address')"  autocomplete="off">
+					   placeholder="@lang('personal-office/auth/register.email_address')"  autocomplete="off">
 				@if ($errors->has('email'))
 					<span class="help-block">
                                 <strong>{{ $errors->first('email') }}</strong>
@@ -113,7 +113,7 @@
 				<label for="sponsor">@lang('personal-office/auth/register.sponsor') <span class="text-danger"> *</span></label>
 				<input type="text" class="form-control" id="sponsor" name="sponsor"
 					   @if(old('sponsor')) value="{{ old('sponsor') }}" @else value="{{$sponsor}}"
-					   @endif placeholder="@lang('sponsor_name')"  autocomplete="off">
+					   @endif placeholder="@lang('personal-office/auth/register.sponsor_name')"  autocomplete="off">
 				@if ($errors->has('sponsor'))
 					<span class="help-block">
                         <strong>{{ $errors->first('sponsor') }}</strong>
@@ -126,11 +126,11 @@
 				<div class="row">
 					<div class="col-xs-6">
 						<input type="password" class="form-control" name="password" id="password"
-							   placeholder="@lang('password')"  autocomplete="off">
+							   placeholder="@lang('personal-office/auth/register.password')"  autocomplete="off">
 					</div>
 					<div class="col-xs-6">
 						<input type="password" class="form-control" name="password_confirmation"
-							   placeholder="@lang('password_confirmation')"  autocomplete="off">
+							   placeholder="@lang('personal-office/auth/register.password_confirmation')"  autocomplete="off">
 					</div>
 				</div>
 				@if ($errors->has('password') || $errors->has('password_confirmation'))

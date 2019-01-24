@@ -11,7 +11,7 @@
                             <input type="text" name="title"
                                    class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}"
                                    id="inputTitle"
-                                   placeholder="@lang('title_')"
+                                   placeholder="@lang('unify/personal-office/issues/new.title_')"
                                    autocomplete="off">
                             @if ($errors->has('title'))
                                 <span class="form-text text-danger">{{ $errors->first('title') }}</span>
@@ -22,7 +22,7 @@
                             <textarea name="body"
                                       class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
                                       id="inputBody"
-                                      placeholder="@lang('text')"
+                                      placeholder="@lang('unify/personal-office/issues/new.text')"
                                       rows="4"
                                       autocomplete="off"></textarea>
                             @if ($errors->has('body'))

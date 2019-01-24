@@ -80,7 +80,7 @@
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
-                                   placeholder="@lang('first_name')" value="{{old('first_name') ?? $verification->first_name}}"
+                                   placeholder="@lang('unify/personal-office/verification.first_name')" value="{{old('first_name') ?? $verification->first_name}}"
                                    autocomplete="off"
                                    required
                                    @input_disabled($verification->status_processing)>
@@ -93,7 +93,7 @@
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
-                                   placeholder="@lang('last_name')"
+                                   placeholder="@lang('unify/personal-office/verification.last_name')"
                                    value="{{old('last_name') ?? $verification->last_name}}"
                                    autocomplete="off"
                                    required
@@ -121,7 +121,7 @@
                             <input type="text" name="email"
                                    class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}"
                                    id="email"
-                                   placeholder="@lang('email')"
+                                   placeholder="@lang('unify/personal-office/verification.email')"
                                    value="{{old('email') ?? $verification->email}}"
                                    autocomplete="off"
                                    required
@@ -175,7 +175,7 @@
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"
-                                   placeholder="@lang('pass_word')" autocomplete="off" required
+                                   placeholder="@lang('unify/personal-office/verification.pass_word')" autocomplete="off" required
                                    @input_disabled($verification->status_processing)>
                             @if ($errors->has('password'))
                                 <span class="form-text text-danger">{{ $errors->first('password') }}</span>

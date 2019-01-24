@@ -10,7 +10,7 @@
 
 							<div class="form-group  {{ $errors->has('title') ? ' has-error' : '' }}">
 								<label class="control-label" for="title">Title</label>
-								<input class="form-control" id="title" name="title" type="text" placeholder="@lang('title_')"  autocomplete="off" required>
+								<input class="form-control" id="title" name="title" type="text" placeholder="@lang('personal-office/issues/new.title_')"  autocomplete="off" required>
 								@if ($errors->has('title'))
 									<span class="help-block">{{ $errors->first('title') }}</span>
 								@endif
@@ -18,7 +18,7 @@
 
 							<div class="form-group  {{ $errors->has('body') ? ' has-error' : '' }}">
 								<label class="control-label" for="body">Text</label>
-								<textarea class="form-control" rows="4" id="body" name="body" placeholder="@lang('text')" required></textarea>
+								<textarea class="form-control" rows="4" id="body" name="body" placeholder="@lang('personal-office/issues/new.text')" required></textarea>
 								@if ($errors->has('body'))
 									<span class="help-block">{{ $errors->first('body') }}</span>
 								@endif
