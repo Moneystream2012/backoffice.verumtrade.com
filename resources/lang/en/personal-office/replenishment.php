@@ -27,4 +27,5 @@ return [
     'date' => 'Date',
     'empty' => 'Empty',
     'balance_replenish' => 'Balance replenishment',
+    'click' => 'Click here to reply...',
 ];
