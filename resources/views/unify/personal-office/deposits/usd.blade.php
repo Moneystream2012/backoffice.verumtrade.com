@@ -173,7 +173,7 @@
                                     <li>
                                         <div class="row h-100 ">
                                             <div class="col-md-5">
-                                                <input type="text" class="form-control amount money" onkeyup="$().calculator({{$product['plan']}}, this, {{$product['percent']}})" placeholder="@lang('unify/personal-office/deposits/usd.phpinvest_amount')">
+                                                <input type="text" class="form-control amount money" onkeyup="$().calculator({{$product['plan']}}, this, {{$product['percent']}})" placeholder="@lang('unify/personal-office/deposits/usd.invest_amount')">
                                             </div>
                                             <div class="col-md-7 align-self-center text-right">
                                                 <div class="">
