@@ -35,7 +35,7 @@
 								{{csrf_field()}}
 								<div class="mail-body">
 									<div class="form-group  {{ $errors->has('body') ? ' has-error' : '' }}">
-									<textarea class="form-control" rows="5" name="body" placeholder="@lang('placeholder')"
+									<textarea class="form-control" rows="5" name="body" placeholder="@lang('personal-office/issues/show.placeholder')"
 									          style="resize:vertical;"
 											{{ $issue->is_baned_send ? 'disabled' : ''}}
 									></textarea>

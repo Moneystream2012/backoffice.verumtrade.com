@@ -131,7 +131,7 @@
                             <input type="text" name="first_name"
                                    class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}"
                                    id="inputFirstName"
-                                   placeholder="@lang('first_name')" value="{{old('first_name') ?? $auth->first_name}}"
+                                   placeholder="@lang('unify/personal-office/profile.first_name')" value="{{old('first_name') ?? $auth->first_name}}"
                                    autocomplete="off">
                             @if ($errors->has('first_name'))
                                 <span class="form-text text-danger">{{ $errors->first('first_name') }}</span>
@@ -142,7 +142,7 @@
                             <input type="text" name="last_name"
                                    class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}"
                                    id="inputLastName"
-                                   placeholder="@lang('last_name')"
+                                   placeholder="@lang('unify/personal-office/profile.last_name')"
                                    value="{{old('last_name') ?? $auth->last_name}}" autocomplete="off">
                             @if ($errors->has('last_name'))
                                 <span class="form-text text-danger">{{ $errors->first('last_name') }}</span>
@@ -199,7 +199,7 @@
                             <input type="password" name="password"
                                    class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}"
                                    id="inputPassword"
-                                   placeholder="@lang('pass_word')" autocomplete="off" required>
+                                   placeholder="@lang('unify/personal-office/profile.pass_word')" autocomplete="off" required>
                             @if ($errors->has('password'))
                                 <span class="form-text text-danger">{{ $errors->first('password') }}</span>
                             @endif

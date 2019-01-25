@@ -22,7 +22,7 @@
                 <input type="text" autocomplete="off" autofocus="autofocus" class="form-control" name="username_or_uid"
                        id="username_or_uid"
                        autocomplete="off"
-                       placeholder="@lang('username_or_id')">
+                       placeholder="@lang('personal-office/auth/login.username_or_id')">
                 @if ($errors->has('username_or_uid'))
                     <span class="help-block">
 						<strong>{{ $errors->first('username_or_uid') }}</strong>
